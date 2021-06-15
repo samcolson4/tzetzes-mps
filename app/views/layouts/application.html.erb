@@ -12,14 +12,16 @@
    
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  
-  <div class="nav_bar">
-    <h1 id="site-header">MP News Search</h1>
-    <a href="/">Search</a> | <a href="/about">About</a> | <a> Contact </a>
-  </div>
+
   <body>
-  <div class="main-body">
-    <%= yield %>
-  </div>
+    <div class="navbar">
+      <h1 id="site-header">MP News Search</h1>
+      <a href="/">Search</a> | <a href="/about">About</a> | <a> Contact </a>
+      <br></br>
+    </div>
+
+    <div class="main-body">
+      <%= yield %>
+    </div>
   </body>
 </html>
