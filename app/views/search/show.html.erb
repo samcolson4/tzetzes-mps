@@ -1,6 +1,14 @@
-<h2> <%= @mp.name %> </h2>
-<h3> <%= @mp.constituency %> </h3>
+<h1> <%= @mp.name %> </h1>
 
+<% if @mp.party == "Labour" then colour_class = "party_labour" %>
+<% elsif @mp.party == "Conservative" then colour_class = "party_con" %>
+<% end %>
+
+
+<h2 id="mp-constituency" class=<%=colour_class%>><%= @mp.constituency %> </h2>
+<h2> <%= @mp.party %> </h2>
+
+<br></br>
 
 <h2>Articles</h2>
 <div id="article-block">
