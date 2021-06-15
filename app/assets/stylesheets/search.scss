@@ -32,6 +32,13 @@ hr {
   padding: 10px;
 }
 
+#mp-photo {
+  width: 20vw;
+  max-width: 250px;
+  float: right;
+  transform: translate(-1vw, 1vw);
+}
+
 .party_labour {
   background-color: red;
 }
