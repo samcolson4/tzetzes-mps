@@ -1,18 +1,18 @@
-<h2>
-  <%= @mp.name %>
-</h2>
-<h4>
-  <%= @mp.constituency %>
-</h4>
+<h2> <%= @mp.name %> </h2>
+<h3> <%= @mp.constituency %> </h3>
+
 
 <h2>Articles</h2>
+<div id="article-block">
+  <% @mp.articles.each do |article| %>
+  <% text = article.article_text.truncate(200) %>
 
 
-
-<% @mp.articles.each do |article| %>
-  <h4>
-    <strong><%= article.headline %></strong>
-  </h4>
-
-  <hr>
-<% end %>
+    <h2> <%= article.headline %> </h2>
+    <h3> <%= article.tag %> </h3>
+    <p> <%= text %> </p>
+    <a href=<%= article.url %>> Read more </a>
+    <br></br>
+    <hr>
+  <% end %>
+</div>
