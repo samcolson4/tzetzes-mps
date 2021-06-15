@@ -24,7 +24,7 @@
       <% text = article.article_text.truncate(200) %>
 
 
-        <h2> <%= article.headline %> </h2>
+        <h2><a href=<%= article.url %>> <%= article.headline %> </a></h2>
         <h3> <%= article.tag %> </h3>
         <p> <%= text %> </p>
         <a href=<%= article.url %>> Read more </a>
