@@ -1,23 +1,21 @@
-<div id="mp-block">
-  <h1> <%= @mp.name %> </h1>
+<% if @mp.party == "Labour" then colour_class = "party_labour" %>
+<% elsif @mp.party == "Conservative" then colour_class = "party_con" %>
+<% end %>
 
-  <% if @mp.party == "Labour" then colour_class = "party_labour" %>
-  <% elsif @mp.party == "Conservative" then colour_class = "party_con" %>
-  <% end %>
+<div id="mp-block" class=<%=colour_class%>>
 
   <img id="mp-photo" src="https://pbs.twimg.com/media/D2BuhbQWkAAPiUv.png">
 
-  <div class=<%=colour_class%>>
+  <div id="mp-info">
+    <h1> <%= @mp.name %> </h1>
     <h2 id="mp-constituency"><%= @mp.constituency %> </h2>
     <h2 id="mp-party"> Party: <%= @mp.party %> </h2>
     <h2 id="mp-party"> Majority: <%= @mp.majority %> </h2>
     <h2 id="mp-party"> First elected: <%= @mp.first_elected %> </h2>
     <h2 id="mp-party"> Elections won: <%= @mp.elections_won %> </h2>
   </div>
-
-
-  <br></br>
 </div>
+  <br></br>
 
 <div id="article-block">
   <h1>Articles</h1>

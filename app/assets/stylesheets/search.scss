@@ -14,35 +14,42 @@ hr {
 
 #article-block {
   margin-left: 5vw;
-  margin-right: 5vw
+  margin-right: 5vw;
 }
 
 #mp-block {
  width: 66vw;
- margin: auto
+ align-items: center;
+ margin: auto;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+ grid-gap: 9px;
+}
+
+#mp-info {
+  padding-left: 10vw;
 }
 
 #mp-constituency {
-  color: white;
-  padding: 10px;
+  // color: white;
 }
 
 #mp-party {
-  color: white;
-  padding: 10px;
+  // color: white;
 }
 
 #mp-photo {
   width: 20vw;
   max-width: 250px;
-  float: right;
-  transform: translate(-1vw, 1vw);
+  padding-left: 3vw;
 }
 
 .party_labour {
-  background-color: red;
+  border: 2px solid red;
+  padding: 0.5em;
 }
 
 .party_con {
-  background-color: blue;
+  border: 2px solid #115da8;
+  padding: 0.5em;
 }
