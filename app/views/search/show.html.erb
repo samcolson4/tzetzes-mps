@@ -1,0 +1,18 @@
+<h2>
+  <%= @mp.name %>
+</h2>
+<h4>
+  <%= @mp.constituency %>
+</h4>
+
+<h2>Articles</h2>
+
+
+
+<% @mp.articles.each do |article| %>
+  <h4>
+    <strong><%= article.headline %></strong>
+  </h4>
+
+  <hr>
+<% end %>

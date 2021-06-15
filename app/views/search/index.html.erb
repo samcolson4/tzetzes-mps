@@ -1,0 +1,6 @@
+<h2>All MPs</h2>
+<% @mps.each do |mp| %>
+  <div class="mp-box">
+    <a href=<%="/mps/" + "#{mp.id}"%>> <%= mp.name %></a>
+  </div>
+<% end %>
