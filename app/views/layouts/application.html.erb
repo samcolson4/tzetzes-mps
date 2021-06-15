@@ -11,12 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
+  <div class="nav_bar">
+    <h1>MP News Search</h1>
+    <a href="/">SEARCH</a> | <a href="/about">ABOUT</a>
+  </div>
   <body>
-    <div class="nav_bar">
-      <h1>MP News Search</h1>
-      <a href="/">SEARCH</a> | <a href="/about">ABOUT</a>
-      <%= yield %>
-    </div>
+  <div class="main-body">
+    <%= yield %>
+  </div>
   </body>
 </html>
