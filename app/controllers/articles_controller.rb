@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
-  def create 
+  def create
     @mp = Mp.find(params[:mp_id])
     @article = @mp.articles.create(article_params)
   end
