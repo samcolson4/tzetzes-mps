@@ -49,8 +49,8 @@
   color: rgb(0, 0, 0);
   width: 100vw;
   transition: all 0.4s ease-out;
-  padding-left: 1.5em;
-  margin-bottom: 1.5em;
+  /* margin-bottom: 1.5em; */
+  text-align: center;
 }
 
 /* scrolling state */

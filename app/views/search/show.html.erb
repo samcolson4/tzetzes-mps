@@ -1,27 +1,29 @@
-<h1> <%= @mp.name %> </h1>
+<div id="mp-block">
+  <h1> <%= @mp.name %> </h1>
 
-<% if @mp.party == "Labour" then colour_class = "party_labour" %>
-<% elsif @mp.party == "Conservative" then colour_class = "party_con" %>
-<% end %>
+  <% if @mp.party == "Labour" then colour_class = "party_labour" %>
+  <% elsif @mp.party == "Conservative" then colour_class = "party_con" %>
+  <% end %>
 
-<div class=<%=colour_class%>>
-  <h2 id="mp-constituency"><%= @mp.constituency %> </h2>
-  <h2 id="mp-party"> <%= @mp.party %> </h2>
+  <div class=<%=colour_class%>>
+    <h2 id="mp-constituency"><%= @mp.constituency %> </h2>
+    <h2 id="mp-party"> <%= @mp.party %> </h2>
+  </div>
+
+  <br></br>
 </div>
 
-<br></br>
-
-<h2>Articles</h2>
 <div id="article-block">
-  <% @mp.articles.each do |article| %>
-  <% text = article.article_text.truncate(200) %>
+  <h1>Articles</h1>
+    <% @mp.articles.each do |article| %>
+    <% text = article.article_text.truncate(200) %>
 
 
-    <h2> <%= article.headline %> </h2>
-    <h3> <%= article.tag %> </h3>
-    <p> <%= text %> </p>
-    <a href=<%= article.url %>> Read more </a>
-    <br></br>
-    <hr>
-  <% end %>
+      <h2> <%= article.headline %> </h2>
+      <h3> <%= article.tag %> </h3>
+      <p> <%= text %> </p>
+      <a href=<%= article.url %>> Read more </a>
+      <br></br>
+      <hr>
+    <% end %>
 </div>
