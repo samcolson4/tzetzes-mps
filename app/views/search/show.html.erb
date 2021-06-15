@@ -17,17 +17,23 @@
 </div>
   <br></br>
 
-<div id="article-block">
-  <h1>Articles</h1>
-    <% @mp.articles.each do |article| %>
-    <% text = article.article_text.truncate(200) %>
+<% if @mp.articles.length > 0 %>
+  <div id="article-block">
+    <h1>Articles</h1>
+      <% @mp.articles.each do |article| %>
+      <% text = article.article_text.truncate(200) %>
 
 
-      <h2> <%= article.headline %> </h2>
-      <h3> <%= article.tag %> </h3>
-      <p> <%= text %> </p>
-      <a href=<%= article.url %>> Read more </a>
-      <br></br>
-      <hr>
-    <% end %>
-</div>
+        <h2> <%= article.headline %> </h2>
+        <h3> <%= article.tag %> </h3>
+        <p> <%= text %> </p>
+        <a href=<%= article.url %>> Read more </a>
+        <br></br>
+        <hr>
+      <% end %>
+  </div>
+<% else %>
+  <div>
+  <h1 id="no-articles">No articles to display </h1>
+  </div>
+<% end %>
