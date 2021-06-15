@@ -4,9 +4,10 @@
 <% elsif @mp.party == "Conservative" then colour_class = "party_con" %>
 <% end %>
 
-
-<h2 id="mp-constituency" class=<%=colour_class%>><%= @mp.constituency %> </h2>
-<h2> <%= @mp.party %> </h2>
+<div class=<%=colour_class%>>
+  <h2 id="mp-constituency"><%= @mp.constituency %> </h2>
+  <h2 id="mp-party"> <%= @mp.party %> </h2>
+</div>
 
 <br></br>
 
