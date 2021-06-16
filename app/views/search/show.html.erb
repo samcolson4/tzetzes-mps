@@ -4,7 +4,7 @@
 
 <div id="mp-block" class=<%=colour_class%>>
 
-  <img id="mp-photo" src="https://pbs.twimg.com/media/D2BuhbQWkAAPiUv.png">
+  <img id="mp-photo" src=<%=@mp.photo_url%> alt=<%=@mp.name%>>
 
   <div id="mp-info">
     <h1> <%= @mp.name %> MP</h1>
