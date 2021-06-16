@@ -1,8 +1,12 @@
 <div class="mp-box">
   <h2>All MPs</h2>
-  <% @mps.each do |mp| %>
-      <div class="mp-link">
-        <a href=<%="/mps/" + "#{mp.id}"%>> <%= mp.name %> MP</a>
-      </div>
-  <% end %>
+    
+    <% @mp_data.each do |mp| %>
+        <div class="mp-link">
+          <a href=<%="/mps/" + "#{mp.id}"%>> <%= mp.name %> MP</a>
+        </div>
+    <% end %>
+
+  <br></br>
+  <%= paginate @mp_data %>
 </div>

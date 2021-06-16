@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
   def index
-    @mps = Mp.all
+    # @mps = Mp.all
+    @mp_data = Mp.page(params[:page])
   end
 
   def show
