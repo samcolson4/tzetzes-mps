@@ -19,7 +19,7 @@
 
 <% if @mp.articles.length > 0 %>
   <div id="article-block">
-    <h1>Articles</h1>
+    <h1>Recent articles</h1>
       <% @mp.articles.each do |article| %>
       <% text = article.article_text.truncate(200) %>
 
