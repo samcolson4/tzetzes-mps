@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
     # @mps = Mp.all
-    @mp_data = Mp.page(params[:page])
+    @mp_data = Mp.page(params[:page]).per(50)
   end
 
   def show
