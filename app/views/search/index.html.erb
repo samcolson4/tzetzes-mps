@@ -1,5 +1,5 @@
 <div id="mp-page">
-  <h2>All MPs</h2>
+  <h2 class="page-content">All MPs</h2>
 
   <div class="mp-box">    
       <% @mp_data.each do |mp| %>
@@ -13,5 +13,9 @@
   
   <br></br>
 
+<div class="page-content">
   <%= paginate @mp_data %>
+</div>
+    <br></br>
+
 </div>
