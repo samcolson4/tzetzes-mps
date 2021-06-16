@@ -2,7 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#about-body {
-  margin-left: 20vw;
-  margin-right: 20vw;
+.about-body {
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 2vh;
+  padding-bottom: 4vh;
+}
+
+#founder-body {
+  background-color: rgb(255, 242, 226);
+  padding-top: 2vh;
+  padding-bottom: 4vh;
 }
