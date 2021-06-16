@@ -4,7 +4,9 @@
   <div class="mp-box">    
       <% @mp_data.each do |mp| %>
           <div class="mp-link">
-            <a href=<%="/mps/" + "#{mp.id}"%>> <%= mp.name %> MP</a>
+          <a href=<%="/mps/" + "#{mp.id}"%>>
+            <img class="all-mp-image"src=<%=mp.photo_url%> alt=<%=mp.name%>>
+             <h3><%= mp.name %> MP<h3></a>
           </div>
       <% end %>
   </div>
