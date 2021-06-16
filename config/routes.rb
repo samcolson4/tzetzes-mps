@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/mps/:name", to: "search#show_name"
   get "/about", to: "about#index"
   get "/contact", to: "about#contact"
+  get "/search", to: "search#search"
 
   post "/articles/api_article_input", to: "articles#create"
 
