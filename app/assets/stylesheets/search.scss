@@ -15,6 +15,16 @@ hr {
 .mp-box {
   padding-left: 5vw;
   padding-right: 5vw;
+  align-items: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+  grid-gap: 9px;
+}
+
+#mp-page {
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 #no-articles {
