@@ -13,15 +13,15 @@
     <h4 id="mp-party"> Majority: <%= @mp.majority %> </h4>
     <h4 id="mp-party"> First elected: <%= @mp.first_elected %> </h4>
     <h4 id="mp-party"> Elections won: <%= @mp.elections_won %> </h4>
-    <h4><a href=<%=@mp.mp_parliament_url%>>Parliament.uk member page</a></h4>
+    <h4><%= link_to "Parliament.uk member page", @mp.mp_parliament_url, :target => "_blank" %></h4>
     
     <% if @mp.mp_website_url.chars.length > 0 %>
-      <h4><a href=<%=@mp.mp_website_url%>>Website</a></h4>
+      <h4><%= link_to "Website", @mp.mp_website_url, :target => "_blank"%></h4>
     <% end %>
   </div>
 </div>
 
-  <br></br>
+  <br>
 
 <% if @mp.articles.length > 0 %>
   <div id="article-block">
