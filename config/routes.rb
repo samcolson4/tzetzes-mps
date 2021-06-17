@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get "/contact", to: "about#contact"
   get "/search", to: "search#search"
 
-  post "/articles/api_article_input", to: "articles#create"
+  # post "/articles/api_article_input", to: "articles#create"
+
+  namespace :api do
+    resources :articles
+  end
 
   resources :mps do
     resources :articles

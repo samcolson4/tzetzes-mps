@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
   def index
     @articles = Article.all
   end
@@ -10,7 +11,7 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.require(:headline).permit(:datetime, :url, :tag, :article_text)
+    params.permit(:headline, :datetime, :url, :tag, :article_text)
   end
 
 end
