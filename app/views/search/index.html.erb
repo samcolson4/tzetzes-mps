@@ -4,18 +4,19 @@
   <div class="mp-box">    
       <% @mp_data.each do |mp| %>
           <div class="mp-link">
-          <a href=<%="/mps/" + "#{mp.id}"%>>
-            <img class="all-mp-image"src=<%=mp.photo_url%> alt=<%=mp.name%>>
-             <h3><%= mp.name %> MP<h3></a>
+            <%= link_to "/mps/#{mp.id}" do %>
+              <img class="all-mp-image"src=<%=mp.photo_url%> alt=<%=mp.name%>>
+              <h3><%= mp.name %> MP<h3>
+            <% end %>
           </div>
       <% end %>
   </div>
   
-  <br></br>
+  <br>
 
 <div class="page-content">
   <%= paginate @mp_data %>
 </div>
-    <br></br>
 
+<br>
 </div>
