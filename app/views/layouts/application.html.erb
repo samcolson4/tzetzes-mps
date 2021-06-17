@@ -15,9 +15,9 @@
 
   <body>
     <div class="navbar">
-      <h1 id="site-header"><a href="/">Tzetzes: MP News Search</a></h1>
-      <a href="/">All MPs</a> | <a href="/search">Search</a> | <a href="/about">About</a> | <a href="/contact"> Contact </a>
-      <br></br>
+      <h1 id="site-header"><%=link_to "Tzetzes: MP News Search", "/" %></h1>
+      <%= link_to "All MPs", "/" %> | <%= link_to "Search", "/search" %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
+      <br>
     </div>
 
     <div class="main-body">
