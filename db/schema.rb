@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_16_170715) do
+ActiveRecord::Schema.define(version: 2021_06_17_085728) do
 
   create_table "articles", force: :cascade do |t|
     t.string "headline"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 2021_06_16_170715) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "photo_url"
+    t.integer "mp_serial"
+    t.string "mp_parliament_url"
+    t.string "mp_website_url"
   end
 
   add_foreign_key "articles", "mps"
