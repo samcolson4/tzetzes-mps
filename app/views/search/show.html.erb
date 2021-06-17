@@ -30,7 +30,7 @@
     <h1>Recent articles</h1>
       <% @mp.articles.each do |article| %>
       
-      <% if article.article_text.split('. ').length > 10 %>
+      <% if article.article_text.split(' ').length > 10 %>
       <% text = article.article_text.split('. ')[0] + '. ' + article.article_text.split('. ')[1] + '...' %>
       <% else %>
       <% text = "No text preview available. The article may contain a video or other media. Please click 'Read more' to view." %>
