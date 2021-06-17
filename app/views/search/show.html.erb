@@ -31,7 +31,8 @@
       <% @mp.articles.each do |article| %>
       
       <% if article.article_text %>
-      <% text = article.article_text.truncate(200) %>
+      <% trunc_num = rand(200..650) %>
+      <% text = article.article_text.truncate(trunc_num) %>
       <% else %>
       <% text = "" %>
       <% end %>
