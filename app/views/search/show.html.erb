@@ -27,6 +27,7 @@
   <div id="article-block">
     <h1>Recent articles</h1>
       <% @mp.articles.each do |article| %>
+      
       <% if article.article_text %>
       <% text = article.article_text.truncate(200) %>
       <% else %>
@@ -38,10 +39,15 @@
         <p> Published: <%= article.datetime %> </p>
         <p> <%= text %> </p>
         <a href=<%= article.url %>> Read more </a>
-        <br></br>
+        <br><br>
+        
+        <% if article != @mp.articles[-1] %>
         <hr>
+        <% end %>
+
       <% end %>
   </div>
+  <br>
 <% else %>
   <div>
   <h1 id="no-articles">No articles to display </h1>
