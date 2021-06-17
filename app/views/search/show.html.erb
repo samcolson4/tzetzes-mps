@@ -27,8 +27,11 @@
   <div id="article-block">
     <h1>Recent articles</h1>
       <% @mp.articles.each do |article| %>
+      <% if article.article_text %>
       <% text = article.article_text.truncate(200) %>
-
+      <% else %>
+      <% text = "" %>
+      <% end %>
 
         <h2><a href=<%= article.url %>> <%= article.headline %> </a></h2>
         <h3> <%= article.tag %> </h3>
