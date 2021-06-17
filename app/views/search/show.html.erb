@@ -39,7 +39,7 @@
         <h2><%= link_to article.headline, article.url, :target => "_blank" %> </h2>
 
         <h3> <%= article.tag %> </h3>
-        <p> Published: <%= article.datetime %> </p>
+        <p> Published: <%= article.datetime.to_formatted_s(:long) %> </p>
         <p> <%= text %> </p>
 
         <%= link_to "Read more", article.url, :target => "_blank" %>
