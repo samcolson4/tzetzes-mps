@@ -6,7 +6,14 @@ class ArticlesController < ApplicationController
 
   def create
     @mp = Mp.find(params[:mp_id])
-    @article = @mp.articles.create(article_params)
+
+    if params["mp_serial"] == @mp.mp_serial
+      @article = @mp.articles.create(article_params)
+    else 
+      print("\n")
+      print("Article not created: mp_serials did not match")
+      print("\n")
+    end
   end
 
 private
