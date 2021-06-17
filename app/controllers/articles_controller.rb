@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
 
     if params["mp_serial"] == @mp.mp_serial
       @article = @mp.articles.create(article_params)
-    else 
+    else
       print("\n")
       print("Article not created: mp_serials did not match")
       print("\n")
