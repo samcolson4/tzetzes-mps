@@ -30,11 +30,10 @@
     <h1>Recent articles</h1>
       <% @mp.articles.each do |article| %>
       
-      <% if article.article_text %>
+      <% if article.article_text.split('. ').length > 10 %>
       <% text = article.article_text.split('. ')[0] + '. ' + article.article_text.split('. ')[1] + '...' %>
-
       <% else %>
-      <% text = "" %>
+      <% text = "No text preview available. The article may contain a video or other media. Please click 'Read more' to view." %>
       <% end %>
 
         <h2><%= link_to article.headline, article.url, :target => "_blank" %> </h2>
