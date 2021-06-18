@@ -14,6 +14,15 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def search
+    if params[:search].blank?
+      redirect_to "/" and return
+    else
+      @parameter = params[:search].downcase
+      @results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
+
 private
   def article_params
     params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article)
