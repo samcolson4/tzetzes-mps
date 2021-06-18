@@ -15,6 +15,25 @@
     <br>
   </div>
 <% end %>
+
+<% if @constit_results.length > 0 %>
+  <div class="constit-results results">
+    <br>
+      <div class="width-set">
+      <h1 class="section-header"> Constituency results: </h1>
+      <% @constit_results.each do |mp| %>
+        <% if @constit_results[0] != mp %>
+        <br>
+        <%end %>
+        <h2 class="constit-results"><%= link_to mp.constituency + ' - '+ mp.name, mp_path(mp.id), :class => 'constit-results' %></h2>
+        <% if @constit_results[-1] != mp %>
+        <hr>
+        <%end %>
+      <% end %>
+      </div>
+    <br>
+  </div>
+<%end%>
   
 <% if @headline_results.length > 0 %>
   <div class="headline-results results">

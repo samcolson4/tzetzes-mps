@@ -22,6 +22,7 @@ class ArticlesController < ApplicationController
       @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%")
       @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%")
       @mp_results = Mp.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+      @constit_results = Mp.all.where("lower(constituency) LIKE :search", search: "%#{@parameter}%")
     end
   end
 
