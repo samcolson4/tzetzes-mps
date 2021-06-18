@@ -1,13 +1,18 @@
+<h1>MPs: </h1>
+<% @mp_results.each do |mp| %>
+<p> <%= mp.name %> </p>
+<% end %>
+
 <h1> Results: </h1>
 <% @headline_results.each do |article| %>
 <h2><%= article.headline %></h2>
-<p> <%= article.mp_id %> </p>
+<% mp = find_mp(article.mp_id) %>
+<p> <%= mp.name %> </p>
 <% end %>
 
+<h1> In-article results: </h1>
 <% @article_text_results.each do |article| %>
-<p> <%= article.headline %> </p>
-<% end %>
-
-<% @mp_results.each do |mp| %>
+<h2> <%= article.headline %> </h2>
+<% mp = find_mp(article.mp_id) %>
 <p> <%= mp.name %> </p>
 <% end %>
