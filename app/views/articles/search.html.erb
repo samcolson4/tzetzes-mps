@@ -1,4 +1,13 @@
-<h1> SEARCH </h1>
-<% @results.each do |article| %>
-<%= article.headline %>
+<h1> Results: </h1>
+<% @headline_results.each do |article| %>
+<h2><%= article.headline %></h2>
+<p> <%= article.mp_id %> </p>
+<% end %>
+
+<% @article_text_results.each do |article| %>
+<p> <%= article.headline %> </p>
+<% end %>
+
+<% @mp_results.each do |mp| %>
+<p> <%= mp.name %> </p>
 <% end %>
