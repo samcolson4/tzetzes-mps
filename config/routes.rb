@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  root "search#index"
-  get "/mps", to: "search#index"
-  get "/mps/:id", to: "search#show"
-  get "/mps/:name", to: "search#show_name"
+  root "mps#index"
+  get "/mps", to: "mps#index"
+  get "/mps/:id", to: "mps#show"
   get "/about", to: "about#index"
   get "/contact", to: "about#contact"
-  get "/search", to: "search#search"
+  get "/search", to: "mps#search"
 
   namespace :api do
     resources :articles
