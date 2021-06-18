@@ -10,9 +10,18 @@ class ArticlesController < ApplicationController
     if params["mp_serial"] == @mp.mp_serial
       @article = @mp.articles.create(article_params)
     else
-      print("\n")
-      print("Article not created: mp_serials did not match")
-      print("\n")
+      print("\nArticle not created: mp_serials did not match\n")
+    end
+  end
+
+  def search
+    if params[:search].blank?
+      redirect_to "/" and return
+    else
+      @parameter = params[:search].downcase
+      @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%")
+      @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%")
+      @mp_results = Mp.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
     end
   end
 

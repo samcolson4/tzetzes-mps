@@ -1,3 +1,44 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.results {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin: auto;
+}
+
+.mp-results {
+  background-color: rgb(255, 242, 226);
+}
+
+.mp-grid {
+  align-items: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+  grid-gap: 1em;
+}
+
+.headline-results {
+  background-color: white;
+}
+
+.article-results {
+  background-color: rgb(255, 242, 226);
+}
+
+.no-results {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: center;
+}
+
+.width-set {
+  max-width: 70em;
+  margin: auto;
+}
+
+.mp-photo {
+  max-width: 250px;
+}

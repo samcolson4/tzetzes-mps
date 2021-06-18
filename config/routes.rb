@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/mps/:id", to: "mps#show"
   get "/about", to: "about#index"
   get "/contact", to: "about#contact"
-  get "/search", to: "mps#search"
+  get "/search", to: "articles#search"
 
   namespace :api do
     resources :articles
