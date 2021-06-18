@@ -22,3 +22,9 @@
   <p> <%= link_to mp.name, mp_path(mp.id) %> </p>
   <% end %>
 <% end %>
+
+<% if @headline_results.length == 0  && @article_text_results.length == 0 && @mp_results.length == 0 %>
+<div class="no-results">
+  <h2><%= link_to 'No results. Return home.', "/"%> </h2>
+</div>
+<%end %>
