@@ -18,16 +18,17 @@
       <h1 id="site-header"><%=link_to "Tzetzes: MP News Search", "/" %></h1>
       <%= link_to "All MPs", "/" %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
       <br>
+
       <div class="search-field">
         <%= form_tag(search_path, :method => "get") do %>
           <div class="input-group">
-            <%= search_field_tag :search, params[:search], placeholder: "Search for MPs or keywords", class: "form-control" %> <%= button_tag "Search", :class => 'search-button', :name => nil %>
+            <%= search_field_tag :search, params[:search], placeholder: "Search for MPs, constituencies, or keywords", class: "form-control" %> <%= button_tag "Search", :class => 'search-button', :name => nil %>
           </div>
         <%end%>
         <br>
       </div>
-    </div>
 
+    </div>
     <div class="main-body">
       <%= yield %>
     </div>

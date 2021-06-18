@@ -6,7 +6,7 @@
       <div class="mp-grid width-set">
         <% @mp_results.each do |mp| %>
           <%= link_to mp_path(mp.id) do %>
-            <img src=<%=mp.photo_url %>>
+            <img src=<%=mp.photo_url %> class="mp-photo">
             <p> <%= mp.name %> MP</p>
           <% end %>
         <% end %>
@@ -49,7 +49,7 @@
 <% end %>
   
 <% if @headline_results.length == 0  && @article_text_results.length == 0 && @mp_results.length == 0 %>
-<div class="no-results">
-  <h2><%= link_to 'No results. Return home.', "/"%> </h2>
-</div>
+  <div class="no-results">
+    <h2><%= link_to 'No results. Return home.', "/"%> </h2>
+  </div>
 <%end %>

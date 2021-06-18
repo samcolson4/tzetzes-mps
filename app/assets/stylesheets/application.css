@@ -68,3 +68,23 @@
 .navbar.fixed-top a {
   color: white;
 }
+
+.search-field {
+  margin: auto;
+}
+
+.form-control {
+  margin-top: 10px;
+  /* padding-left: 20px; */
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 30vw;
+}
+
+.search-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
