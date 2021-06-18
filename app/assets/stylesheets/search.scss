@@ -28,7 +28,8 @@ hr {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, auto));
-  grid-gap: 9px;
+  grid-gap: 1em;
+  max-width: 70em;
 }
 
 #mp-page {

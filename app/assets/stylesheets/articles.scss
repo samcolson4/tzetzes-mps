@@ -5,10 +5,19 @@
 .results {
   padding-left: 10vw;
   padding-right: 10vw;
+  margin: auto;
 }
 
 .mp-results {
-  background-color: blanchedalmond;
+  background-color: rgb(255, 242, 226);
+}
+
+.mp-grid {
+  align-items: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+  grid-gap: 1em;
 }
 
 .headline-results {
@@ -16,11 +25,16 @@
 }
 
 .article-results {
-  background-color: blanchedalmond;
+  background-color: rgb(255, 242, 226);
 }
 
 .no-results {
   padding-left: 10vw;
   padding-right: 10vw;
   text-align: center;
+}
+
+.width-set {
+  max-width: 70em;
+  margin: auto;
 }
