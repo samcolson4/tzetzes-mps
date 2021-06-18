@@ -21,7 +21,7 @@
       <div class="search-field">
         <%= form_tag(search_path, :method => "get") do %>
           <div class="input-group">
-            <%= search_field_tag :search, params[:search], placeholder: "Type ", class: "form-control" %> <%= button_tag "Search", :class => 'search-button', :name => nil %>
+            <%= search_field_tag :search, params[:search], placeholder: "Search for MPs or keywords", class: "form-control" %> <%= button_tag "Search", :class => 'search-button', :name => nil %>
           </div>
         <%end%>
         <br>
