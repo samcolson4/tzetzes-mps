@@ -1,3 +1,26 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.results {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.mp-results {
+  background-color: blanchedalmond;
+}
+
+.headline-results {
+  background-color: white;
+}
+
+.article-results {
+  background-color: blanchedalmond;
+}
+
+.no-results {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: center;
+}
