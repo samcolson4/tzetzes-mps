@@ -31,7 +31,9 @@
  } */
 
  #site-header {
-   padding: 0;
+   padding: 0em;
+   padding-top: 1em ;
+   margin: 0;
  }
 
  body {
