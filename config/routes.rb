@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/about", to: "about#index"
   get "/contact", to: "about#contact"
   get "/search", to: "articles#search"
+  get "/articles", to: "articles#index"
 
   namespace :api do
     resources :articles
