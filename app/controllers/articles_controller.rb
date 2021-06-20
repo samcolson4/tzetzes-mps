@@ -4,6 +4,10 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def newest_articles
+    @newest_articles = Article.find(:all, order => 'datetimeASC')
+  end
+
   def create
     @mp = Mp.find(params[:mp_id])
 
