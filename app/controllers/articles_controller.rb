@@ -2,10 +2,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-  end
-
-  def newest_articles
-    @newest_articles = Article.find(:all, order => 'datetimeASC')
+    @newest = @articles.order(datetime: :desc)
   end
 
   def create
