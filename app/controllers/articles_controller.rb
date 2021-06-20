@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page]).per(15)
     @newest = @articles.order(datetime: :desc)
+    @oldest = @articles.order(datetime: :asc)
   end
 
   def create
