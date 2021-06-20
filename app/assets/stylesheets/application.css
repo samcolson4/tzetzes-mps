@@ -90,3 +90,8 @@
   padding-top: 8px;
   padding-bottom: 8px;
 }
+
+.content {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
