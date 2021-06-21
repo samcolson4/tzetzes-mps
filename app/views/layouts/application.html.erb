@@ -40,8 +40,10 @@
     </div>
     <div class="main-body">
     <div class="content">
+      <% if notice || alert %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+      <% end %>
     </div>
       <%= yield %>
     </div>
