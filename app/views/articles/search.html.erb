@@ -46,7 +46,7 @@
         <%end %>
         <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
         <% mp = find_mp(article.mp_id) %>
-        <p> <%= link_to mp.name + ' MP', mp_path(mp.id) %> </p>
+        <p> <%= link_to mp.name + ' MP', mp_path(mp.id) %> |  <%= article.datetime.strftime('%d / %m / %Y') %></p>
         <% if @headline_results[-1] != article %>
         <hr>
         <%end %>
