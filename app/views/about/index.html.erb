@@ -1,6 +1,5 @@
 <div id="welcome" class="content width-set">
   <%=image_tag("https://media.istockphoto.com/vectors/houses-of-parliament-vector-id472290221?k=6&m=472290221&s=612x612&w=0&h=6Ael7ZP5OVW_I6TdCJbg6m2-z_OEXGnfMaqZp19pR3Y=", :class => "about-image")%>
-  <h1>Welcome to the Tzetzes beta!</h1>
 
 </div>
 
@@ -10,15 +9,21 @@
     Tzetzes is a unique new tool that allows you to search through MPs' press releases, blogs and local news articles.
   </p>
 
+  <p>Named after John Tzetzes, a Byzantine scholar that preserved and catalogued swathes of ancient Greek literature in the 12th Century, we too want to catalogue as much information as is possible, even if it is less valuable than what the ancient Greeks produced. </p>
+
+  <%= image_tag 'https://pbs.twimg.com/profile_images/1016084048320585728/hO6EiISt.jpg', :id => 'tzetzes-image', :class => 'about-image', :alt => 'John Tzetzes' %>
+
   <br>
 
-  <h1>Why 'tzetzes'?</h1>
-  <p><a href="https://en.wikipedia.org/wiki/John_Tzetzes">John Tzetzes</a> was a Byzantine who lived in Constantinople in the 12th Century. He is credited with preserving a significant amount of information from the ancient Greeks, including literature and scholarship.</p>
-  <p>Our website, Tzetzes, is named after him because of our commitment to making information that was previously hard to search through and find more visible.</p>
+  <h1>Beta</h1>
+  <p>Tzetzes is currently in beta.</p>
+  <p>The most intensive part of setting up this website is the time it takes to automate collecting data from each MPs' website. For now, we have built a 'vertical slice', meaning that the site has its core functionality, but limited to a select number of MPs. </p>
+  <p>As it stands, the MPs available to search are Conservatives that use the 'Bluetree' platform. Other MPs will be added in due course.</p>
 </div>
 
 <div id="founder-body" class='about-body'>
   <h1>Team</h1>
   <p>This website was designed and built by Sam Colson.</p>
-  <a>Linkedin</a> | <a>GitHub</a> | <a>Democracy 3.0</a>
+  <%= link_to 'Linkedin', 'https://www.linkedin.com/in/samcolson/', :target => '_blank' %> | <%= link_to 'GitHub', 'https://github.com/samcolson4', :target => '_blank' %>
+  <br><br><br><br><br>
 </div>
