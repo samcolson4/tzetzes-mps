@@ -11,12 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
    
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'filters'%>
+
+
   </head>
 
   <body>
     <div class="navbar">
       <h1 id="site-header"><%=link_to "Tzetzes: MP News Search", "/" %></h1>
-      <%= link_to "All MPs", "/" %> | <%= link_to "All Articles", "/articles" %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
+      <%= link_to "MPs", "/" %> | <%= link_to "Articles", "/articles" %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
       <br>
 
       <div class="search-field">
