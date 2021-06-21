@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "mps#index"
   get "/mps", to: "mps#index"
   get "/mps/:id", to: "mps#show"
