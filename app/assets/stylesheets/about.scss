@@ -18,12 +18,15 @@
 #welcome {
   height: 85vh;
   text-align: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 .about-image {
   display: block;
   margin: auto;
   max-width: 90vw;
+  max-height: 90vh;
 }
 
 #tzetzes-image {
