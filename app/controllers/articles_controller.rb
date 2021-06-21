@@ -22,8 +22,8 @@ class ArticlesController < ApplicationController
       redirect_to "/" and return
     else
       @parameter = params[:search].downcase
-      @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%")
-      @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%")
+      @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc)
+      @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc)
       @mp_results = Mp.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
       @constit_results = Mp.all.where("lower(constituency) LIKE :search", search: "%#{@parameter}%")
     end
