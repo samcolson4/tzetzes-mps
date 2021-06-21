@@ -19,9 +19,16 @@
   <body>
     <div class="navbar">
       <h1 id="site-header"><%=link_to "Tzetzes: MP News Search", "/" %></h1>
-      <%= link_to "MPs", "/" %> | <%= link_to "Articles", "/articles" %> | <%= link_to "About", "/about" %> | <%= link_to "Contact", "/contact" %>
+      
+      <% if signed_in? %>
+        <%= link_to "MPs", "/mps" %> | <%= link_to "Articles", "/articles" %> | <%= link_to "About", about_url(:anchor => "about-body")  %> | <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to "Sign in", "/users/sign_in" %> | <%= link_to "Register", "/users/sign_up" %> 
+      <% end %>
+      
       <br>
 
+      <% if signed_in? %>
       <div class="search-field">
         <%= form_tag(search_path, :method => "get") do %>
           <div class="input-group">
@@ -30,9 +37,23 @@
         <%end%>
         <br>
       </div>
+      <% else %>
+      <br>
+      <% end %>
 
     </div>
     <div class="main-body">
+    <div class="content">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+        <br>
+      <% end %>
+
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+        <br>
+      <% end %>
+    </div>
       <%= yield %>
     </div>
   </body>

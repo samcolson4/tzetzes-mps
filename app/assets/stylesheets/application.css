@@ -95,3 +95,19 @@
   padding-left: 10vw;
   padding-right: 10vw;
 }
+
+.notice {
+  text-align: center;
+  padding: 1em;
+  border: 2px solid black;
+  max-width: 33vw;
+  margin: auto;
+}
+
+.alert {
+  text-align: center;
+  padding: 1em;
+  border: 2px solid black;
+  max-width: 33vw;
+  margin: auto; 
+}
