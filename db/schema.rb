@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_21_092440) do
+ActiveRecord::Schema.define(version: 2021_06_22_071800) do
 
   create_table "articles", force: :cascade do |t|
     t.string "headline"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 2021_06_21_092440) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["mp_id"], name: "index_articles_on_mp_id"
     t.index ["url"], name: "index_articles_on_url", unique: true
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
   create_table "mps", force: :cascade do |t|
@@ -38,6 +49,8 @@ ActiveRecord::Schema.define(version: 2021_06_21_092440) do
     t.integer "mp_serial"
     t.string "mp_parliament_url"
     t.string "mp_website_url"
+    t.string "slug"
+    t.index ["slug"], name: "index_mps_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|

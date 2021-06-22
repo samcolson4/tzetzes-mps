@@ -60,3 +60,6 @@ gem 'kaminari'
 
 # Users
 gem 'devise'
+
+# Nice URLS
+gem 'friendly_id'
