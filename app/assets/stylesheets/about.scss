@@ -16,7 +16,6 @@
 }
 
 #welcome {
-  height: 85vh;
   text-align: center;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -25,10 +24,13 @@
 .about-image {
   display: block;
   margin: auto;
-  max-width: 90vw;
-  max-height: 90vh;
 }
 
 #tzetzes-image {
   max-width: 25vw;
+}
+
+#map {
+  max-height: 75vh;
+  width: 50vw;
 }
