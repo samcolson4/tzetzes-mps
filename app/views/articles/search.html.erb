@@ -5,7 +5,7 @@
       <h1 class="section-header">MPs: </h1>
       <div class="mp-grid width-set">
         <% @mp_results.each do |mp| %>
-          <%= link_to mp_path(mp.id) do %>
+          <%= link_to mp_path(mp.slug) do %>
             <img src=<%=mp.photo_url %> class="mp-photo">
             <p> <%= mp.name %> MP</p>
           <% end %>
@@ -25,7 +25,7 @@
         <% if @constit_results[0] != mp %>
         <br>
         <%end %>
-        <h2 class="constit-results"><%= link_to mp.constituency + ' - '+ mp.name, mp_path(mp.id), :class => 'constit-results' %></h2>
+        <h2 class="constit-results"><%= link_to mp.constituency + ' - '+ mp.name, mp_path(mp.slug), :class => 'constit-results' %></h2>
         <% if @constit_results[-1] != mp %>
         <hr>
         <%end %>
@@ -46,7 +46,7 @@
         <%end %>
         <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
         <% mp = find_mp(article.mp_id) %>
-        <p> <%= link_to mp.name + ' MP', mp_path(mp.id) %> |  <%= article.datetime.strftime('%d / %m / %Y') %></p>
+        <p> <%= link_to mp.name + ' MP', mp_path(mp.slug) %> |  <%= article.datetime.strftime('%d / %m / %Y') %></p>
         <% if @headline_results[-1] != article %>
         <hr>
         <%end %>
@@ -67,7 +67,7 @@
         <%end %>
       <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
       <% mp = find_mp(article.mp_id) %>
-      <p> <%= link_to mp.name + ' MP', mp_path(mp.id) %> |  <%= article.datetime.strftime('%d / %m / %Y') %> </p>
+      <p> <%= link_to mp.name + ' MP', mp_path(mp.slug) %> |  <%= article.datetime.strftime('%d / %m / %Y') %> </p>
         <% if @article_text_results[-1] != article %>
         <hr>
         <%end %>
