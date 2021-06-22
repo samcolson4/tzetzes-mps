@@ -1,8 +1,21 @@
 <div id="welcome" class="content width-set">
+  <% if signed_in? %>
+  <h1>Welcome to the Tzetzes beta, <%= current_user.name %></h1>
+  <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
+  <p>If you have any questions or feedback, please contact Sam.</p>
+
+  <% else %>
   <h1>Welcome to the Tzetzes beta</h1>
   <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
   <p>If you have any questions or feedback, please contact Sam.</p>
+  <%end%>
+
+  <% if signed_in? %>
+    <h2> <%=link_to 'Share tzetzes', 'mailto:email_here?subject=MP%20websites%20searches&body=www.tzetzes.com' %> </h2>
+  <% else %>
   <h2><%= link_to "Sign in or register to get started.", '/users/sign_up' %></h2>
+
+  <%end%>
   <%=image_tag("about/about-main.png", :class => "about-image", :id => "map")%>
 </div>
 
