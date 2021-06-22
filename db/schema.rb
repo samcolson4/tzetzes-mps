@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2021_06_22_071800) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "articles", force: :cascade do |t|
     t.string "headline"
     t.datetime "datetime"
     t.string "url"
     t.string "tag"
     t.text "article_text"
-    t.integer "mp_id", null: false
+    t.bigint "mp_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["mp_id"], name: "index_articles_on_mp_id"
