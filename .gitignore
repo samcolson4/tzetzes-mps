@@ -41,3 +41,7 @@ yarn-debug.log*
 
 *.DS_Store
 .DS_Store
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
