@@ -7,3 +7,9 @@ def sign_up
   fill_in "Password", with: "Bobobobob"
   click_button "Sign up"
 end
+
+def sign_out 
+  visit "/"
+  click_link "Sign out"
+  visit "/"
+end
