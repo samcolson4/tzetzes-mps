@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "User can view all articles" do
+feature "User can view articles" do
   scenario "User can view a list of all articles" do
     create_article
     sign_up
@@ -22,19 +22,19 @@ feature "Users can search for articles and other things" do
   end
 
   scenario "User is told if no articles match query" do
-    # create_article
     sign_up
     find(:css, "input[id$='search']").set("Dog")
     click_button "Search"
     expect(page).to have_current_path("/search?search=Dog")
     expect(page).to have_content("No results. Return home.")
- end
+  end
 
-  # scenario "User can view MPs on further pages of the site" do
-  #   sign_up
-  #   click_link("MPs")
-  #   click_link("3")
-  #   expect(page).to have_content("Robert Courts MP")
-  # end
+  scenario "User can search for a specific MP" do
+    create_article
+    sign_up
+    find(:css, "input[id$='search']").set("Ben")
+    click_button "Search"
+    expect(page).to have_content("Ben Bradshaw")
+  end
 
 end
