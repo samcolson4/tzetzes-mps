@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:create, :update]
 
   def index
     @articles = Article.page(params[:page]).per(15)
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article)
+    params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article, :mp_serial)
   end
 
 end
