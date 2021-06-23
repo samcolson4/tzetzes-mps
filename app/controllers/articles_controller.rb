@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article, :mp_serial)
+    params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article)
   end
 
 end

@@ -3,7 +3,6 @@ articles = Article.create([
   "url":"https://www.melstridemp.com", 
   "tag": "Local News", 
   "article_text": "Local MP, Mel Stride, today visited a local post office", 
-  "headline": "MP Visits Post Office",
-  "mp_serial": 172
+  "headline": "MP Visits Post Office"
   }
 ])
