@@ -34,7 +34,17 @@ feature "Users can search for articles and other things" do
     sign_up
     find(:css, "input[id$='search']").set("Ben")
     click_button "Search"
+    expect(page).to have_content("MPs:")
     expect(page).to have_content("Ben Bradshaw")
+  end
+
+  scenario "User can search for a specific constituency" do
+    create_article
+    sign_up
+    find(:css, "input[id$='search']").set("Central Devon")
+    click_button "Search"
+    expect(page).to have_content("Constituency results:")
+    expect(page).to have_content("Central Devon")
   end
 
 end
