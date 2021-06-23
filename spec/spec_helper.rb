@@ -13,6 +13,12 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require 'simplecov'
+require 'simplecov-console'
+SimpleCov.start
+
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -28,15 +34,12 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  require 'simplecov'
-  require 'simplecov-console'
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+   SimpleCov::Formatter::HTMLFormatter,
+   SimpleCov::Formatter::Console,
+ ])
 
-# SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
- #   SimpleCov::Formatter::HTMLFormatter,
- #   SimpleCov::Formatter::Console,
- # ])
-
-  SimpleCov.formatter = SimpleCov::Formatter::Console
+  # SimpleCov.formatter = SimpleCov::Formatter::Console
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
