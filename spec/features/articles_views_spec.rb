@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "User can view articles" do
+feature "User can view and interact with articles" do
   scenario "User can view a list of all articles" do
     create_article
     sign_up
@@ -8,6 +8,14 @@ feature "User can view articles" do
     click_link("Articles")
     expect(page).to have_content("All articles")
     expect(page).to have_content("MP saves dog")
+  end
+
+  scenario "User can click an article and be taken to the page where it is hosted" do
+    create_article
+    sign_up
+    click_link("Articles")
+    click_link("MP saves dog")
+    expect(page).to have_current_path("http://www.melstridemp.com")
   end
 end
 
