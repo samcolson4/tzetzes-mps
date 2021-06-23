@@ -16,7 +16,9 @@
 
 require 'simplecov'
 require 'simplecov-console'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "rails_helper.rb"
+end
 
 
 RSpec.configure do |config|
