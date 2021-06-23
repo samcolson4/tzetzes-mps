@@ -28,6 +28,16 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
+  require 'simplecov'
+  require 'simplecov-console'
+
+# SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+ #   SimpleCov::Formatter::HTMLFormatter,
+ #   SimpleCov::Formatter::Console,
+ # ])
+
+  SimpleCov.formatter = SimpleCov::Formatter::Console
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
   end
