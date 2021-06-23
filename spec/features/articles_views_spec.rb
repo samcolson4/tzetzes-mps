@@ -9,7 +9,9 @@ feature "User can view all articles" do
     expect(page).to have_content("All articles")
     expect(page).to have_content("MP saves dog")
   end
+end
 
+feature "Users can search for articles and other things" do
   scenario "User can search for a specific article" do
      create_article
      sign_up
