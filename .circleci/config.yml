@@ -26,6 +26,6 @@ jobs:
             # environment
             # - run: cp .sample.env .env
             # DB
-            - run: bundle exec rake db:setup
+            - run: bundle exec rails db:migrate
             # tests
             - run: bundle exec rspec 
