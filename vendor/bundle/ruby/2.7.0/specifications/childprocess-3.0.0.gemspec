@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/enkessler/childprocess".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.3.0".freeze)
-  s.rubygems_version = "3.1.6".freeze
+  s.rubygems_version = "3.2.21".freeze
   s.summary = "A simple and reliable solution for controlling external programs running in the background on any Ruby / OS combination.".freeze
 
-  s.installed_by_version = "3.1.6" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.2.21" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

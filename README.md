@@ -9,13 +9,14 @@ Whilst sounding quite dry (!), this is a radical step forward in terms of quick 
 ## Quickstart
 First, clone this repository. Then:
 
-Databases
+Databases:
 ```bash
 $ brew install postgresql
 $ brew services start postgresql
 $ psql postgres
 ```
 
+Rails app:
 ```bash
 $ bundle exec rspec # Run the tests to ensure it works
 $ rails db:migrate

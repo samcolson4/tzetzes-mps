@@ -15,10 +15,10 @@ Gem::Specification.new do |s|
   s.files = ["CHANGELOG.md".freeze, "LICENSE.txt".freeze, "README.md".freeze]
   s.homepage = "http://github.com/chetan/simplecov-console".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.1.6".freeze
+  s.rubygems_version = "3.2.21".freeze
   s.summary = "Simple console output formatter".freeze
 
-  s.installed_by_version = "3.1.6" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.2.21" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

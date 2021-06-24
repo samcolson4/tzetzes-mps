@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   s.homepage = "https://ms-ati.github.io/docile/".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.5.0".freeze)
-  s.rubygems_version = "3.1.6".freeze
+  s.rubygems_version = "3.2.21".freeze
   s.summary = "Docile keeps your Ruby DSLs tame and well-behaved.".freeze
 
-  s.installed_by_version = "3.1.6" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.2.21" if s.respond_to? :installed_by_version
 end
