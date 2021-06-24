@@ -108,14 +108,10 @@ input[type=search] {
   border-radius: 5px; 
   transition-timing-function: ease-in;
   transition: 1s;
-}
+  color: black;
+  height: 40px;
 
-/* input[type=search]:hover {
-  background-color: green;
-  transition-timing-function: ease-in;
-  transition: 1s;
-  color: white;
-} */
+}
 
 .content {
   padding-left: 10vw;
