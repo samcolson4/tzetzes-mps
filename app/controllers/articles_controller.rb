@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  # before_action :authenticate_user!, except: [:create, :update]
+  before_action :authenticate_user!, except: [:create, :update]
 
   def index
     @articles = Article.page(params[:page]).per(15)
