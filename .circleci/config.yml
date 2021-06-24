@@ -12,7 +12,8 @@ jobs:
             environment:
               POSTGRES_USER: tzetzes-mps
               POSTGRES_DB: tzetzes-mps_test
-              POSTGRES_PASSWORD: ""
+              POSTGRES_PASSWORD: "circle_ci_postgres"
+              # POSTGRES_HOST_AUTH_METHOD: trust
         steps:
             - checkout
             # Bundle install dependencies
