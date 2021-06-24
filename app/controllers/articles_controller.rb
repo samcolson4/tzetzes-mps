@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
   def search
     if params[:search].blank?
-      redirect_to "/" and return
+      redirect_to "/about" and return
     else
       @parameter = params[:search].downcase
       @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc)
