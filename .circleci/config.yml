@@ -16,6 +16,11 @@ jobs:
               # POSTGRES_HOST_AUTH_METHOD: trust
         steps:
             - checkout
+            - run:
+                name: install dependencies
+                command: |
+                  gem update --system
+                  gem install bundler
             # Bundle install dependencies
             - run: bundle install --path vendor/bundle
             # environment
