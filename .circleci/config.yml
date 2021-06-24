@@ -24,7 +24,7 @@ jobs:
             # Bundle install dependencies
             - run: bundle install --path vendor/bundle
             # environment
-            - run: cp .sample.env .env
+            # - run: cp .sample.env .env
             # DB
             - run: bundle exec rake db:setup
             # tests
