@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:create, :update]
 
   def index
     @articles = Article.page(params[:page]).per(15)
@@ -12,15 +12,12 @@ class ArticlesController < ApplicationController
 
     if params["mp_serial"] == @mp.mp_serial
       @article = @mp.articles.create(article_params)
-      print("\nArticle created\n" + "#{@article.id}")
-    else
-      print("\nArticle not created: mp_serials did not match\n")
     end
   end
 
   def search
     if params[:search].blank?
-      redirect_to "/" and return
+      redirect_to "/about" and return
     else
       @parameter = params[:search].downcase
       @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc)
@@ -32,7 +29,7 @@ class ArticlesController < ApplicationController
 
 private
   def article_params
-    params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article)
+    params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id, :article, :mp_serial)
   end
 
 end

@@ -10,8 +10,4 @@ class MpsController < ApplicationController
     @mp = Mp.friendly.find(params[:id])
   end
 
-  def show_name
-    @mp = Mp.find(params[:name])
-  end
-
 end
