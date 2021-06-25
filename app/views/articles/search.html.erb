@@ -40,6 +40,12 @@
     <br>
       <div class="width-set">
       <h1 class="section-header"> Headline results: </h1>
+      <% if @headline_results.length > 1 %>
+        <p> <%= @headline_results.length %> results found.</p>
+      <% else %>
+        <p> <%= @headline_results.length %> result found.</p>
+      <% end %>
+      <br>
       <% @headline_results.each do |article| %>
         <% if @headline_results[0] != article %>
         <br>
@@ -61,6 +67,12 @@
     <br>
       <div class="width-set">
       <h1 class="section-header"> In-article results: </h1>
+      <% if @article_text_results.length > 1 %>
+        <p> <%= @article_text_results.length %> results found.</p>
+      <% else %>
+        <p> <%= @article_text_results.length %> result found.</p>
+      <% end %>
+      <br>
       <% @article_text_results.each do |article| %>
         <% if @article_text_results[0] != article %>
         <br>
