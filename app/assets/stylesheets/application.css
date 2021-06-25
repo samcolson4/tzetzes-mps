@@ -57,7 +57,6 @@
   position: fixed;
   color: white;
   width: 100vw;
-  /* height: 10vh; */
   transition: all 0.4s ease-out;
   text-align: center;
   background-color:  rgb(0, 136, 82);
@@ -65,8 +64,12 @@
   top: 0;
 }
 
+#navbar-padding-sign-in {
+  height: 10vh;
+}
+
 #navbar-padding {
-  padding-bottom: 10vh;
+  height: 10vh;
 }
 
 .navbar a {
