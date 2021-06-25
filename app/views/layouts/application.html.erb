@@ -46,7 +46,12 @@
       <% end %>
 
     </div>
-    <div id="navbar-padding"></div>
+    <% if signed_in? %>
+      <div id="navbar-padding-sign-in"></div>
+    <% else %>
+      <div id="navbar-padding"></div>
+    <% end %>
+    
     <div class="main-body">
     <div class="content">
       <% if notice %>
