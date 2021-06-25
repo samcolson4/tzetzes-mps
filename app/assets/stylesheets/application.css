@@ -26,10 +26,6 @@
    text-decoration: none;
  }
 
- /* .main-body {
-   margin: 1.5em
- } */
-
  #site-header {
    padding: 0em;
    padding-top: 1em ;
@@ -46,34 +42,20 @@
   padding: 0;
 }
 
-/* default state */
 .navbar {
-  position: relative;
-  /* default colors + transition */
-  /* background-color:  rgb(0, 136, 82); */
+  position: fixed;
   color: white;
   width: 100vw;
+  height: 10vh;
   transition: all 0.4s ease-out;
-  /* margin-bottom: 1.5em; */
   text-align: center;
   background-color:  rgb(0, 136, 82);
   margin-bottom: 1em;
-}
-
-/* scrolling state */
-.navbar.fixed-top {
-  position: fixed;
   top: 0;
-  width: 100vw;
-  /* scrolling colors */
-  background-color:  rgb(0, 136, 82);
-  color: white;
-  margin-bottom: 1.5em;
-  border-bottom: 2px solid white ;
 }
 
-.navbar.fixed-top a {
-  color: white;
+#navbar-padding {
+  padding-bottom: 10vh;
 }
 
 .navbar a {
@@ -86,7 +68,6 @@
 
 .form-control {
   margin-top: 10px;
-  /* padding-left: 20px; */
   padding-right: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
