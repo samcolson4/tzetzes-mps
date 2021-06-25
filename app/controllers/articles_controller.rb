@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
+    t1 = Time.now
     if params[:search].blank?
       redirect_to "/about" and return
     else
@@ -25,6 +26,8 @@ class ArticlesController < ApplicationController
       @mp_results = Mp.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
       @constit_results = Mp.all.where("lower(constituency) LIKE :search", search: "%#{@parameter}%")
     end
+    t2 = Time.now
+    @time_delta = t2 - t1
   end
 
 private
