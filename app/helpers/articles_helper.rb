@@ -30,7 +30,11 @@ module ArticlesHelper
       
         return output_words
       end
+    
+    else
+      return ["", "", ""]
     end
+
   end
 
 end
