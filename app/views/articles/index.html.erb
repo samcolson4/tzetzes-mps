@@ -1,6 +1,7 @@
 <div class="content">
   <div class="width-set">
     <h1 class="section-header"> All articles </h1>
+      <p><%= @articles_length %> articles.</p>
       <% @newest.each do |article| %>
         <% if @newest[0] != article %>
         <br>

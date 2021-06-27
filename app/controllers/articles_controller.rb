@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
     @articles = Article.page(params[:page]).per(15)
     @newest = @articles.order(datetime: :desc)
     @oldest = @articles.order(datetime: :asc)
+    @articles_length = Article.all.length
   end
 
   def create
