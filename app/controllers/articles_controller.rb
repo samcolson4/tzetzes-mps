@@ -22,10 +22,10 @@ class ArticlesController < ApplicationController
       redirect_to "/about" and return
     else
       @parameter = params[:search].downcase
-      @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc)
-      @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc)
-      @mp_results = Mp.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
-      @constit_results = Mp.all.where("lower(constituency) LIKE :search", search: "%#{@parameter}%")
+      @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc).limit(1000)
+      @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc).limit(1000)
+      @mp_results = Mp.all.where("lower(name) LIKE :search", search: "%#{@parameter}%").limit(1000)
+      @constit_results = Mp.all.where("lower(constituency) LIKE :search", search: "%#{@parameter}%").limit(1000)
     end
     t2 = Time.now
     @time_delta = t2 - t1
