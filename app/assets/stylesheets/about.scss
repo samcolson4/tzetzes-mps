@@ -44,10 +44,21 @@
 }
 
 .parallax {
-  background-image: image-url('about/blob.svg');
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.blob_1 {
+  background-image: image-url('about/blob.svg');
+}
+
+.blob_2 {
+  background-image: image-url('about/blob_2.svg');
+}
+
+.blob_3 {
+  background-image: image-url('about/blob_3.svg');
 }
