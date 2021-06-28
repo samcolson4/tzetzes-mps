@@ -137,4 +137,5 @@ input[type=search] {
   padding-right: 2em;
   margin: auto;
   text-align: right;
+  border-top: 1px solid black;
 }
