@@ -44,20 +44,20 @@
 
 /* Mobile displays */
 @media only screen and (max-width: 600px) {
-  #navbar-padding {
+  /* #navbar-padding {
     height: 100px;
-  }
+  } */
 
-  #navbar-padding-sign-in {
+  /* #navbar-padding-sign-in {
     height: 200px;
-  }
+  } */
 }
 
 .navbar {
   position: fixed;
   color: white;
   width: 100vw;
-  transition: all 0.4s ease-out;
+  /* transition: all 0.4s ease-out; */
   text-align: center;
   background-color:  rgb(0, 136, 82);
   margin-bottom: 2em;
@@ -69,7 +69,7 @@
 }
 
 #navbar-padding {
-  height: 10vh;
+  
 }
 
 .navbar a {
