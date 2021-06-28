@@ -2,12 +2,12 @@
   <% if signed_in? %>
   <h1 id="welcome-username-box">Welcome to the Tzetzes beta, <%= current_user.name %></h1>
   <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
-  <p>If you have any questions or feedback, please contact Sam.</p>
+  <p>If you have any questions or feedback, please <%=link_to 'contact Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20feedback' %>.</p>
 
   <% else %>
   <h1>Welcome to the Tzetzes beta</h1>
   <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
-  <p>If you have any questions or feedback, please contact Sam.</p>
+  <p>If you have any questions or feedback, please <%=link_to 'contact Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20feedback' %>.</p>
   <%end%>
 
   <% if signed_in? %>
@@ -47,8 +47,13 @@
   <p>If you'd like to get in touch about work, or anything else, please <%=link_to 'email Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20contact' %> or contact him via the links below.</p>
   <br>
   <%= link_to 'Linkedin', 'https://www.linkedin.com/in/samcolson/', :target => '_blank' %> | <%= link_to 'GitHub', 'https://github.com/samcolson4', :target => '_blank' %> | <%= link_to 'Open Conservative Project', 'https://anchor.fm/open-conservative-project', :target => '_blank' %>
-  <br><br>
+  <br><br><br>
+
+  <%= link_to 'https://anchor.fm/open-conservative-project', :target => '_blank' do %>
+  <%=image_tag("https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/15796477/15796477-1624882750597-ebe51e96f2424.jpg", :class => "about-image", :id => "opc")%>
+  <% end %>
 </div>
+
 
 <div class="about-body">
 <h1>Other</h1>
