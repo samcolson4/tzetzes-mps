@@ -1,56 +1,58 @@
-<div id="welcome" class="content width-set">
-  <% if signed_in? %>
-  <h1>Welcome to the Tzetzes beta, <%= current_user.name %></h1>
-  <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
-  <p>If you have any questions or feedback, please contact Sam.</p>
+<div class="parallax">
+  <div id="welcome" class="content width-set">
+    <% if signed_in? %>
+    <h1>Welcome to the Tzetzes beta, <%= current_user.name %></h1>
+    <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
+    <p>If you have any questions or feedback, please contact Sam.</p>
 
-  <% else %>
-  <h1>Welcome to the Tzetzes beta</h1>
-  <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
-  <p>If you have any questions or feedback, please contact Sam.</p>
-  <%end%>
+    <% else %>
+    <h1>Welcome to the Tzetzes beta</h1>
+    <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
+    <p>If you have any questions or feedback, please contact Sam.</p>
+    <%end%>
 
-  <% if signed_in? %>
-    <h2> <%=link_to 'Share tzetzes', 'mailto:email_here?subject=MP%20websites%20searches&body=www.tzetzes.com' %> </h2>
-  <% else %>
-  <h2><%= link_to "Sign in or register to get started.", '/users/sign_up' %></h2>
+    <% if signed_in? %>
+      <h2> <%=link_to 'Share tzetzes', 'mailto:email_here?subject=MP%20websites%20searches&body=www.tzetzes.com' %> </h2>
+    <% else %>
+    <h2><%= link_to "Sign in or register to get started.", '/users/sign_up' %></h2>
 
-  <%end%>
-  <%=image_tag("about/about-main.png", :class => "about-image", :id => "map")%>
-</div>
+    <%end%>
+    <%=image_tag("about/color_map.png", :class => "about-image", :id => "map")%>
+  </div>
 
-<div id="about-body" class='about-body width-set'>
+  <div id="about-body" class='about-body width-set'>
 
-<hr>
-  <h1>About us</h1>
-  <p>
-    Tzetzes is a unique new tool that allows you to search through MPs' press releases, blogs and local news articles.
-  </p>
+  <hr>
+    <h1>About us</h1>
+    <p>
+      Tzetzes is a unique new tool that allows you to search through MPs' press releases, blogs and local news articles.
+    </p>
 
-  <p>Named after John Tzetzes, a Byzantine scholar that preserved and catalogued swathes of ancient Greek literature in the 12th Century, we too want to catalogue as much information as is possible, even if it is less valuable than what the ancient Greeks produced. </p>
-  
-  <p>All content displayed on the website remains copyrighted to its respective owner, in most cases the MP that the article was published by. Tzetzes only displays the headline, date of publication, article tag, and occasional 16~ word preview of a relevant section. All of this content is displayed under fair use copyright grounds.</p>
-  <p>All article links open to the original article. Tzetzes cannot be held accountable for the content on those external sites.</p>
-  <br>
+    <p>Named after John Tzetzes, a Byzantine scholar that preserved and catalogued swathes of ancient Greek literature in the 12th Century, we too want to catalogue as much information as is possible, even if it is less valuable than what the ancient Greeks produced. </p>
+    
+    <p>All content displayed on the website remains copyrighted to its respective owner, in most cases the MP that the article was published by. Tzetzes only displays the headline, date of publication, article tag, and occasional 16~ word preview of a relevant section. All of this content is displayed under fair use copyright grounds.</p>
+    <p>All article links open to the original article. Tzetzes cannot be held accountable for the content on those external sites.</p>
+    <br>
 
-  <h1>Beta</h1>
-  <p>Tzetzes is currently in beta.</p>
-  <p>The most intensive part of setting up this website is the time it takes to automate collecting data from each MPs' website. For now, we have built a 'vertical slice', meaning that the site has its core functionality, but limited to a select number of MPs. </p>
-  <p>As it stands, the MPs available to search are Conservatives that use the 'Bluetree' platform. Other MPs will be added in due course.</p>
-  
-</div>
+    <h1>Beta</h1>
+    <p>Tzetzes is currently in beta.</p>
+    <p>The most intensive part of setting up this website is the time it takes to automate collecting data from each MPs' website. For now, we have built a 'vertical slice', meaning that the site has its core functionality, but limited to a select number of MPs. </p>
+    <p>As it stands, the MPs available to search are Conservatives that use the 'Bluetree' platform. Other MPs will be added in due course.</p>
+    
+  </div>
 
-<div id="founder-body" class='about-body'>
-  <h1>Team</h1>
-  <p>This website was designed and built by Sam Colson.</p>
-  <p>Sam is a freelancer, currently working for <%=link_to 'Democracy 3.0','https://www.democracythree.org'%>. Working primarily as a lobbyist for the past five years, Sam recently attended a coding bootcamp in order to make better tools for the public, hoping to shed some light on how politics works and give better visibility of our politicians.</p> 
-  <p>If you'd like to get in touch about work, or anything else, please <%=link_to 'email Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20contact' %> or contact him via the links below.</p>
-  <br>
-  <%= link_to 'Linkedin', 'https://www.linkedin.com/in/samcolson/', :target => '_blank' %> | <%= link_to 'GitHub', 'https://github.com/samcolson4', :target => '_blank' %> | <%= link_to 'Open Conservative Project', 'https://anchor.fm/sam-colson', :target => '_blank' %>
-  <br><br>
-</div>
+  <div id="founder-body" class='about-body'>
+    <h1>Team</h1>
+    <p>This website was designed and built by Sam Colson.</p>
+    <p>Sam is a freelancer, currently working for <%=link_to 'Democracy 3.0','https://www.democracythree.org'%>. Working primarily as a lobbyist for the past five years, Sam recently attended a coding bootcamp in order to make better tools for the public, hoping to shed some light on how politics works and give better visibility of our politicians.</p> 
+    <p>If you'd like to get in touch about work, or anything else, please <%=link_to 'email Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20contact' %> or contact him via the links below.</p>
+    <br>
+    <%= link_to 'Linkedin', 'https://www.linkedin.com/in/samcolson/', :target => '_blank' %> | <%= link_to 'GitHub', 'https://github.com/samcolson4', :target => '_blank' %> | <%= link_to 'Open Conservative Project', 'https://anchor.fm/sam-colson', :target => '_blank' %>
+    <br><br>
+  </div>
 
-<div class="about-body">
-<h1>Other</h1>
-  <p>Tag icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.</p>
+  <div class="about-body">
+  <h1>Other</h1>
+    <p>Tag icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.</p>
+  </div>
 </div>
