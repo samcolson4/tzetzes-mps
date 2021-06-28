@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+@media only screen and (max-width: 600px) {
+  input[type=search] {
+    // padding:0; 
+    border: 2px solid white;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    transition-timing-function: ease-in;
+    transition: 1s;
+    color: black;
+    // height: 40px;
+  }
+}
+
 .results {
   padding-left: 10vw;
   padding-right: 10vw;

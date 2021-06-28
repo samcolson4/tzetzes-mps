@@ -28,7 +28,7 @@
 
  #site-header {
    padding: 0em;
-   padding-top: 1em ;
+   padding-top: 2vh;
    margin: 0;
  }
 
@@ -42,15 +42,24 @@
   padding: 0;
 }
 
+.main-body {
+  background-color: transparent;
+}
+
+.viewport {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
 /* Mobile displays */
 @media only screen and (max-width: 600px) {
-  /* #navbar-padding {
+  #navbar-padding {
     height: 100px;
-  } */
+  }
 
-  /* #navbar-padding-sign-in {
+  #navbar-padding-sign-in {
     height: 200px;
-  } */
+  }
 }
 
 .navbar {
@@ -60,16 +69,29 @@
   /* transition: all 0.4s ease-out; */
   text-align: center;
   background-color:  rgb(0, 136, 82);
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   top: 0;
+  /* margin-bottom: 50px; */
+}
+
+.navbar-inner-sign-in {
+  height: 0px;
+}
+
+.navbar-inner-sign-out {
+  height: -5px;
 }
 
 #navbar-padding-sign-in {
-  height: 10vh;
+  height: 150px;
+  /* padding-top: 25px; */
+  background-color: transparent;
 }
 
 #navbar-padding {
-  
+  height: 150px;
+  /* padding-top: 25px; */
+  background-color: transparent;
 }
 
 .navbar a {
@@ -96,7 +118,7 @@
 }
 
 input[type=search] {
-  padding:10px 35px; 
+  padding-left:3px; 
   border: 2px solid white;
   cursor:pointer;
   -webkit-border-radius: 5px;
@@ -130,12 +152,4 @@ input[type=search] {
 
 .time {
   margin: 2em 0em 2em 0em;
-}
-
-.footer {
-  height: 50px;
-  padding-right: 2em;
-  margin: auto;
-  text-align: right;
-  border-top: 1px solid black;
 }

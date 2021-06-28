@@ -1,6 +1,11 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@media only screen and (max-width: 600px) {
+  #map {
+    width: 200px;
+  }
+}
 
 .about-body {
   padding-left: 20vw;
@@ -26,7 +31,7 @@
 .about-image {
   display: block;
   margin: auto;
-  max-width: 750px;
+  max-width: 650px;
   max-height: auto;
 }
 
@@ -36,7 +41,6 @@
 
 #map {
   max-height: 75vh;
-  width: 50vw;
 }
 
 .parallax {
