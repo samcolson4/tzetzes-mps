@@ -28,16 +28,17 @@
       <% @constit_results.each do |mp| %>
         <% if @constit_results[0] != mp %>
         <br>
-        <%end %>
-        <h2 class="constit-results"><%= link_to mp.constituency + ' - '+ mp.name, mp_path(mp.slug), :class => 'constit-results' %></h2>
+        <% end %>
+        <h2 class="constit-results"><%= link_to mp.constituency, mp_path(mp.slug), :class => 'constit-results'%> </h2>
+         <h3> <%= link_to mp.name + ' MP', mp_path(mp.slug), :class => 'constit-results' %></h3>
         <% if @constit_results[-1] != mp %>
         <hr>
-        <%end %>
+        <% end %>
       <% end %>
       </div>
     <br>
   </div>
-<%end%>
+<% end %>
   
 <% if @headline_results.length > 0 %>
   <div class="headline-results results">
