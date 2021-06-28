@@ -131,3 +131,10 @@ input[type=search] {
 .time {
   margin: 2em 0em 2em 0em;
 }
+
+.footer {
+  height: 50px;
+  padding-right: 2em;
+  margin: auto;
+  text-align: right;
+}
