@@ -16,20 +16,24 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'filters'%>
     <%= favicon_link_tag asset_path('favicon.png') %>
-
-
   </head>
 
   <body>
+  <div class="viewport">
+  <div class="parallax blob_<%=rand(1..3)%>">
     <div class="navbar">
       <h1 id="site-header"><%=link_to "Tzetzes: MP News Search", "/" %></h1>
       
       <% if signed_in? %>
+      <div class="navbar-inner-sign-in">
         <%= link_to "MPs", "/mps" %> | <%= link_to "Articles", "/articles" %> | <%= link_to "About", about_url(:anchor => "about-body")  %> | <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      </div>
       <% else %>
+      <div class="navbar-inner-sign-out">
         <%= link_to "Sign in", "/users/sign_in" %> | <%= link_to "Register", "/users/sign_up" %> 
+      </div>
       <% end %>
-      
+
       <br>
 
       <% if signed_in? %>
@@ -44,27 +48,33 @@
       <% else %>
       <br>
       <% end %>
-
     </div>
+
     <% if signed_in? %>
       <div id="navbar-padding-sign-in"></div>
     <% else %>
       <div id="navbar-padding"></div>
     <% end %>
-    
-    <div class="main-body">
-    <div class="content">
-      <% if notice %>
-        <p class="notice"><%= notice %></p>
-        <br>
-      <% end %>
 
-      <% if alert %>
-        <p class="alert"><%= alert %></p>
-        <br>
-      <% end %>
-    </div>
+    <div class="main-body">
+      <div class="content">
+      <br>
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+          <br>
+        <% end %>
+
+        <% if alert %>
+          <p class="alert"><%= alert %></p>
+          <br>
+        <% end %>
+      </div>
+
       <%= yield %>
+
     </div>
+  </div>
+  </div>
   </body>
+
 </html>

@@ -28,16 +28,17 @@
       <% @constit_results.each do |mp| %>
         <% if @constit_results[0] != mp %>
         <br>
-        <%end %>
-        <h2 class="constit-results"><%= link_to mp.constituency + ' - '+ mp.name, mp_path(mp.slug), :class => 'constit-results' %></h2>
+        <% end %>
+        <h2 class="constit-results"><%= link_to mp.constituency, mp_path(mp.slug), :class => 'constit-results'%> </h2>
+         <h3> <%= link_to mp.name + ' MP', mp_path(mp.slug), :class => 'constit-results' %></h3>
         <% if @constit_results[-1] != mp %>
         <hr>
-        <%end %>
+        <% end %>
       <% end %>
       </div>
     <br>
   </div>
-<%end%>
+<% end %>
   
 <% if @headline_results.length > 0 %>
   <div class="headline-results results">
@@ -57,6 +58,7 @@
         <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
         <% mp = find_mp(article.mp_id) %>
         <p> <%= link_to mp.name + ' MP', mp_path(mp.slug) %> |  <%= article.datetime.strftime('%d / %m / %Y') %></p>
+        <%=image_tag("mps/tag.png", :class => "article-tag") %><h4 style="display:inline"> <%= article.tag %> </h4>
 
         <% article_preview = get_preview_text(params[:search], article.article_text) %>
 
@@ -88,6 +90,7 @@
       <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
       <% mp = find_mp(article.mp_id) %>
       <p> <%= link_to mp.name + ' MP', mp_path(mp.slug) %> |  <%= article.datetime.strftime('%d / %m / %Y') %> </p>
+      <%=image_tag("mps/tag.png", :class => "article-tag") %><h4 style="display:inline"> <%= article.tag %> </h4>
 
       <% in_article_preview = get_preview_text(params[:search], article.article_text) %>
       <p> <%= in_article_preview[0] %> <span class="search-highlight"><%= in_article_preview[1] %></span> <%= in_article_preview[2] %> </p>

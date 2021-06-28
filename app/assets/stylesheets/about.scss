@@ -1,18 +1,25 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@media only screen and (max-width: 600px) {
+  #map {
+    width: 200px;
+  }
+}
 
 .about-body {
   padding-left: 20vw;
   padding-right: 20vw;
   padding-top: 2vh;
   padding-bottom: 4vh;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #founder-body {
   background-color: rgb(255, 242, 226);
-  padding-top: 2vh;
-  padding-bottom: 4vh;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 #welcome {
@@ -24,6 +31,8 @@
 .about-image {
   display: block;
   margin: auto;
+  max-width: 650px;
+  max-height: auto;
 }
 
 #tzetzes-image {
@@ -32,5 +41,24 @@
 
 #map {
   max-height: 75vh;
-  width: 50vw;
+}
+
+.parallax {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blob_1 {
+  background-image: image-url('about/blob.svg');
+}
+
+.blob_2 {
+  background-image: image-url('about/blob_2.svg');
+}
+
+.blob_3 {
+  background-image: image-url('about/blob_3.svg');
 }
