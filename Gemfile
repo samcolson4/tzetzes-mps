@@ -71,3 +71,13 @@ gem 'devise'
 
 # Nice URLS
 gem 'friendly_id'
+
+# Email testing
+gem 'mailcatcher'
+gem 'actionview-encoded_mail_to'
+gem 'sidekiq'
+gem 'redis-rails'
+
+# Email styling
+gem 'nokogiri'
+gem 'premailer-rails'

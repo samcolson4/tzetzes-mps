@@ -1,0 +1,36 @@
+$email-background: #EDEDED;
+$email-header-bg: rgb(0, 136, 82);
+
+#email-wrapper {
+  background: $email-background;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  #header {
+    background: $email-header-bg;
+    margin: 30px 30px 0px 30px;
+    padding: 5px 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+
+    .logo {
+      width: 30px;
+      height: auto;
+    }
+  }
+
+  #body {
+    background: white;
+    margin: 0px 30px;
+    margin-bottom: 30px;
+    padding: 10px 30px;
+    padding-bottom: 50vh;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #main-text {
+    margin: 30px 30px 0px 30px;
+    padding: 5px 30px;
+  }
+}
