@@ -74,3 +74,7 @@ gem 'friendly_id'
 
 # Email tester
 gem 'mailcatcher'
+
+# Email styling
+gem 'nokogiri'
+gem 'premailer-rails'
