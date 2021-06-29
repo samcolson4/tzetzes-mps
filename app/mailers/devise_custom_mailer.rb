@@ -4,7 +4,7 @@ class DeviseCustomMailer < Devise::Mailer
   layout 'mailer'
   helper EmailHelper
   helper ApplicationHelper
-  default from: "Sam <sam@tzetzes.com>"
+  default from: "Sam @ Tzetzes<sam@tzetzes.com>"
   
   def confirmation_instructions(record, token, opts={})
     super
