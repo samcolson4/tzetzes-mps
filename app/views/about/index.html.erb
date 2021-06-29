@@ -2,12 +2,12 @@
   <% if signed_in? %>
   <h1 id="welcome-username-box">Welcome to the Tzetzes beta, <%= current_user.name %></h1>
   <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
-  <p>If you have any questions or feedback, please <%=link_to 'contact Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20feedback' %>.</p>
+  <p>If you have any questions or feedback, please <%=link_to 'contact Sam', 'mailto:sam@tzetzes.com?subject=Tzetzes%20feedback' %>.</p>
 
   <% else %>
   <h1>Welcome to the Tzetzes beta</h1>
   <p>Tzetzes allows you to search through MPs' articles, blogs and press releases. This is a brand new technology, and we are building it out slowly, so not every MP is featured yet.</p>
-  <p>If you have any questions or feedback, please <%=link_to 'contact Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20feedback' %>.</p>
+  <p>If you have any questions or feedback, please <%=link_to 'contact Sam', 'mailto:sam@tzetzes.com?subject=Tzetzes%20feedback' %>.</p>
   <%end%>
 
   <% if signed_in? %>
@@ -44,7 +44,7 @@
   <h1>Team</h1>
   <p>This website was designed and built by Sam Colson.</p>
   <p>Sam is a freelancer, currently working for <%=link_to 'Democracy 3.0','https://www.democracythree.org'%>. Working primarily as a lobbyist for the past five years, Sam recently attended a coding bootcamp in order to make better tools for the public, hoping to shed some light on how politics works and give better visibility of our politicians.</p> 
-  <p>If you'd like to get in touch about work, or anything else, please <%=link_to 'email Sam', 'mailto:samcolson4@gmail.com?subject=Tzetzes%20contact' %> or contact him via the links below.</p>
+  <p>If you'd like to get in touch about work, or anything else, please <%=link_to 'email Sam', 'mailto:sam@tzetzes.com?subject=Tzetzes%20contact' %> or contact him via the links below.</p>
   <br>
   <%= link_to 'Linkedin', 'https://www.linkedin.com/in/samcolson/', :target => '_blank' %> | <%= link_to 'GitHub', 'https://github.com/samcolson4', :target => '_blank' %> | <%= link_to 'Open Conservative Project', 'https://anchor.fm/open-conservative-project', :target => '_blank' %>
   <br><br><br>
