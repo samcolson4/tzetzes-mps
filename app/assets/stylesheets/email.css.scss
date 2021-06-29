@@ -12,6 +12,7 @@ $email-header-bg: rgb(0, 136, 82);
     padding: 5px 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    color: white;
 
     .logo {
       width: 30px;
@@ -24,9 +25,12 @@ $email-header-bg: rgb(0, 136, 82);
     margin: 0px 30px;
     margin-bottom: 30px;
     padding: 10px 30px;
-    padding-bottom: 15px;
-    border: 1px solid $email-header-bg;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding-bottom: 50vh;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #main-text {
+    margin: 30px 30px 0px 30px;
+    padding: 5px 30px;
   }
 }
