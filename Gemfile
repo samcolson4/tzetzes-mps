@@ -71,3 +71,6 @@ gem 'devise'
 
 # Nice URLS
 gem 'friendly_id'
+
+# Email tester
+gem 'mailcatcher'
