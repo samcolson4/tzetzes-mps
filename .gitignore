@@ -48,3 +48,6 @@ yarn-debug.log*
 !.elasticbeanstalk/*.global.yml
 
 coverage/
+
+# Ignore SSL
+/.well-known
