@@ -71,6 +71,7 @@ input[type=submit] {
   border-radius: 5px; 
   transition-timing-function: ease-in;
   transition: 1s;
+  -webkit-appearance: none;
 }
 
 input[type=submit]:hover {
@@ -78,4 +79,5 @@ input[type=submit]:hover {
   transition-timing-function: ease-in;
   transition: 1s;
   color: black;
+  -webkit-appearance: none;
 }
