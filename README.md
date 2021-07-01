@@ -7,7 +7,9 @@ Tzetzes is a Rails-based full stack application that:
 
 Whilst sounding quite dry (!), this is a radical step forward in terms of quick and easy searching of publications by elected officials that have not previously been catalogued.
 
+
 ## Quickstart
+
 First, clone this repository. Then:
 
 Databases:
