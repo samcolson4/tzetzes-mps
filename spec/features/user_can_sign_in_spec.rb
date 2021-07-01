@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature "Sign in" do
   scenario "User can sign in using email address and password" do
-    sign_up
-    sign_out
+    sign_up_sign_in
+    sign_out_basic
     expect(page).to have_content("Register")
     click_link("Sign in")
     fill_in "Email", with: "bob@test.com"
@@ -13,8 +13,8 @@ feature "Sign in" do
   end
 
   scenario "User sees an error with an incorrect email / password" do
-    sign_up
-    sign_out
+    sign_up_sign_in
+    sign_out_basic
     expect(page).to have_content("Register")
     click_link("Sign in")
     fill_in "Email", with: "bo@test.com"

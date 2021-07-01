@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "User can view and interact with articles" do
   scenario "User can view a list of all articles" do
     create_article
-    sign_up
+    sign_up_sign_in
     expect(page).to have_content("Articles")
     click_link("Articles")
     expect(page).to have_content("All articles")
@@ -12,7 +12,7 @@ feature "User can view and interact with articles" do
 
   scenario "User can click an article and be taken to the page where it is hosted" do
     create_article
-    sign_up
+    sign_up_sign_in
     click_link("Articles")
     click_link("MP saves dog")
     expect(page).to have_current_path("http://www.melstridemp.com")
@@ -22,7 +22,7 @@ end
 feature "Users can search for articles and other things" do
   scenario "User can search for a specific article" do
      create_article
-     sign_up
+     sign_up_sign_in
      find(:css, "input[id$='search']").set("Dog")
      click_button "Search"
      expect(page).to have_current_path("/search?search=Dog")
@@ -30,7 +30,7 @@ feature "Users can search for articles and other things" do
   end
 
   scenario "User is told if no articles match query" do
-    sign_up
+    sign_up_sign_in
     find(:css, "input[id$='search']").set("Dog")
     click_button "Search"
     expect(page).to have_current_path("/search?search=Dog")
@@ -39,7 +39,7 @@ feature "Users can search for articles and other things" do
 
   scenario "User can search for a specific MP" do
     create_article
-    sign_up
+    sign_up_sign_in
     find(:css, "input[id$='search']").set("Ben")
     click_button "Search"
     expect(page).to have_content("MPs:")
@@ -48,7 +48,7 @@ feature "Users can search for articles and other things" do
 
   scenario "User can search for a specific constituency" do
     create_article
-    sign_up
+    sign_up_sign_in
     find(:css, "input[id$='search']").set("Central Devon")
     click_button "Search"
     expect(page).to have_content("Constituency results:")
