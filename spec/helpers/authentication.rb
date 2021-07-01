@@ -1,4 +1,4 @@
-def sign_up
+def sign_up_basic
   visit "/"
   click_link "Register"
   fill_in "user_name", with: "Bob"
@@ -8,7 +8,6 @@ def sign_up
   fill_in "Password confirmation", with: "Bobobobob"
   click_button "Sign up"
   User.find_by(email: "bob@test.com").confirm
-  visit "/"
 end
 
 def sign_up_sign_in
@@ -28,7 +27,7 @@ def sign_up_sign_in
   click_button "Log in"
 end
 
-def sign_out 
+def sign_out_basic
   visit "/"
   click_link "Sign out"
   visit "/"
