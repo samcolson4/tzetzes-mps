@@ -24,7 +24,9 @@ $ rails db:seed # This will add in MPs and one test article.
 $ rails s #Start the server at localhost:3000
 ```
 
-In order to add more articles, you have to post to the database using a scraper tool. This script is proprietary, but may be open-sourced in the future.
+In order to add more (real) articles, you have to run a proprietary script. This may be open-sourced in the future.
+
+Demo articles can be added via the 'create' method, where you set up a script to post to localhost:3000/mps/:id/articles using json data as described in the create method. They can also be added directly into the DB.
 
 ## Running Tests
 From the root folder, run the following command:
