@@ -30,16 +30,22 @@
     <h1>Recent articles</h1>
       <% @mp.articles.each do |article| %>
       
-      <% if article.article_text.split(' ').length > 1 %>
-      <% text = article.article_text.split('.')[0] + '...' %>
-      <% else %>
-      <% text = "No text preview available. The article may contain a video or other media. Please click 'Read more' to view." %>
-      <% end %>
+        <% if article.article_text.split(' ').length > 1 %>
+        <% text = article.article_text.split('.')[0] + '...' %>
+        <% else %>
+        <% text = "No text preview available. The article may contain a video or other media. Please click 'Read more' to view." %>
+        <% end %>
+
+        <% if article.datetime.strftime('%d / %m / %Y') == "01 / 01 / 1993" %>
+        <% date = "No publication date available." %>
+        <% else %>
+        <% date = "Published: " + "#{article.datetime.strftime('%d / %m / %Y')}" %>
+        <% end %>
 
         <h2><%= link_to article.headline, article.url, :target => "_blank" %> </h2>
 
         <%=image_tag("mps/tag.png", :class => "article-tag") %><h3 style="display:inline"> <%= article.tag %> </h3>
-        <p> Published: <%= article.datetime.strftime('%d / %m / %Y') %> </p>
+        <p> <%= date %> </p>
         <p> <%= text %> </p>
 
         <%= link_to "Read more", article.url, :target => "_blank" %>
