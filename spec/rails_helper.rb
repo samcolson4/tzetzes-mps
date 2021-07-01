@@ -7,6 +7,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require_relative './helpers/authentication'
 require_relative './helpers/articles'
+require_relative './support/devise'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -42,9 +43,6 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   
-  config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include Devise::Test::IntegrationHelpers, type: :request
-
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
 
