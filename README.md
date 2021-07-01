@@ -31,7 +31,7 @@ Demo articles can be added via the 'create' method, where you set up a script to
 ## Running Tests
 From the root folder, run the following command:
 ```bash
-$ rspec 
+$ bundle exec rspec 
 ```
 
 ## Running Tzetzes
