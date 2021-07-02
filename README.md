@@ -1,7 +1,7 @@
 # Tzetzes: MP News Search
 [![Build Status](https://www.travis-ci.com/samcolson4/tzetzes-mps.svg?branch=main)](https://www.travis-ci.com/samcolson4/tzetzes-mps)
 
-[Deployed here](http://www.tzetzes.com)
+[Deployed at www.tzetzes.com](http://www.tzetzes.com)
 
 Tzetzes is a Rails-based full stack application that:
 - Displays an aggregated list of MPs' articles, press releases and local news publications against the correct MP.
