@@ -27,7 +27,7 @@ feature "Signup" do
   scenario "it prevents singup with duplicated email address" do
     sign_up_sign_in
     click_link "Sign out"
-    sign_up
+    sign_up_basic
     expect(page).to have_content("Email has already been taken")
   end
 
