@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/contact", to: "about#contact"
   get "/search", to: "articles#search"
   get "/articles", to: "articles#index"
+  get "/about/privacy", to: "about#privacy"
 
   unauthenticated do
     # root :to => 'about#index'
