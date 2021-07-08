@@ -12,6 +12,7 @@ deploy:
   provider: heroku
   api_key:
     secure: NVvZvsIWkgEMtkQ6oZ/cGslZx5jgLQvoog5gQDm8XPwS5fSBw7wj5Mtuko0sC4q48qlz84e9NGe5rwucy7lPNBijHhvG50z9dtgMHWCwXLy682smW1fmmsyCuuvAHZNdjjzUXVrtW3uEEVvSHqSRUmpYuU/dTfA/1xZILaFmz8/gnyLjSzwl1nxYP6JHQ090bHTTRL0cvPf1aHS49MyIkWg0dhj6A2C6x94Ti4jzNK513FA7YxSn4HPXmtf8OymcfkqtVmYAn0fr3ZPTouPOm+9bvFnorzxBMeW7au+RvIwQgEa2FB1W3GSZk0N0rxWh121uUH6f+fUUh0i/xvrXrFWTWB4fQ/UI1/+yVxycsbATWPpWpuXutYKSciiZzKfqqpK7+PZTJcGC6f9sRXpUDHG6D3Fr2VlbZTxeohBvkqAWGoxGZQQw1WeFKl/U9kPU+hiBz1cxFCm6m9MrFvC27SsaVZLJh4ZfpTKnjm2Kux3ofb0HV534zKC3NlRKahsChrRh8H3d+DhTTK0VOStLVgsDfORDFN9B7WnLpnoIB1FnQ0MnHbczd2X0rSAGAQ8bZEi8+T7xHmqYwO5RimmhhtjHhGp2evykBkmQtKv8KKLSd6G6FPTZGZe9IYPu5wCcP0m7zog4UFDf0DV3KfsHyeN2B6vHTuiImcmNTElI5ps=
-  app:
-    master: tzetzes
+  app: tzetzes
+    on:
+      branch: main
   run: rake db:migrate
