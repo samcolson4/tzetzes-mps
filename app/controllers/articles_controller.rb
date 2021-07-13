@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:create, :update]
+  respond_to :json
 
   def index
     @articles = Article.page(params[:page]).per(15)
@@ -14,6 +15,19 @@ class ArticlesController < ApplicationController
     if params["mp_serial"] == @mp.mp_serial
       @article = @mp.articles.create(article_params)
     end
+
+    if @article
+      render json: {
+        status: :created,
+        article: @article
+      }
+    else 
+      render json: {
+        status: 500,
+        errors: "Error adding to database."
+      }
+    end
+
   end
 
   def search
