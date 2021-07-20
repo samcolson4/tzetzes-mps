@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/contact", to: "about#contact"
   get "/search", to: "articles#search"
   get "/articles", to: "articles#index"
+  get "/articles/statistics", to: "articles#statistics"
   get "/about/privacy", to: "about#privacy"
   get "/api", to: "application#api_index"
 
