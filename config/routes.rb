@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/articles", to: "articles#index"
   get "/about/privacy", to: "about#privacy"
 
+  mount API::Base, at: "/"
+
   unauthenticated do
     # root :to => 'about#index'
   end
