@@ -46,7 +46,19 @@ class ArticlesController < ApplicationController
   end
 
   def statistics
+    @articles_length = Article.all.length
+    @dogs = Article.all.where("lower(article_text) LIKE :search", search: "dog").length
+    @cats = Article.all.where("lower(article_text) LIKE :search", search: "cats").length
+    @hedgehogs = Article.all.where("lower(article_text) LIKE :search", search: "hedgehogs").length
     
+    # Mp with most articles
+    # Tory w/most
+    # Labour w/most 
+    # etc
+    
+    # Most popular day of the week?
+    # Biggest day to add overall (excl. 1993)
+
   end
 
 private
