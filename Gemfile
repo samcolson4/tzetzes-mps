@@ -85,3 +85,4 @@ gem 'premailer-rails'
 
 # API
 gem 'grape'
+gem 'rack-cors'

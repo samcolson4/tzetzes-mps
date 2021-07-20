@@ -13,6 +13,12 @@ module MpNewsSearch
     config.load_defaults 6.1
     config.assets.initialize_on_precompile = false
 
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
+      end
+      
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
