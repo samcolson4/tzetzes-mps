@@ -82,3 +82,6 @@ gem 'redis-rails'
 # Email styling
 gem 'nokogiri'
 gem 'premailer-rails'
+
+# API
+gem 'grape'
