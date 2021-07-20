@@ -23,11 +23,11 @@
       
       <% if signed_in? %>
       <div class="navbar-inner-sign-in">
-        <%= link_to "MPs", "/mps" %> | <%= link_to "Articles", "/articles" %> | <%= link_to "About", about_url(:anchor => "about-body")  %> | <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <%= link_to "MPs", "/mps" %> | <%= link_to "Articles", "/articles" %> | <%= link_to "About", about_url(:anchor => "about-body")  %> | <%= link_to "API", "/api" %> | <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
       </div>
       <% else %>
       <div class="navbar-inner-sign-out">
-        <%= link_to "Sign in", "/users/sign_in" %> | <%= link_to "Register", "/users/sign_up" %> 
+        <%= link_to "Sign in", "/users/sign_in" %> | <%= link_to "Register", "/users/sign_up" %> | <%= link_to "API", "/api" %> 
       </div>
       <% end %>
 

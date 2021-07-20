@@ -1,0 +1,38 @@
+<div id="about-body" class='about-body width-set'>
+  <h1>API</h1>
+  <h2>Data</h2>
+  <p>The Tzetzes API is currently a proof of concept and will be expanded in the future, hence the 'v1' notation.</p>
+  <p>As it stands, the information that can be garned from the API includes:</p>
+  <ul>
+    <li>Name</li>
+    <li>Constituency</li>
+    <li>Majority</li>
+    <li>Year first elected</li>
+    <li>Number of elections won</li>
+    <li>Website URL</li>
+  </ul>
+
+  <p>The data is returned as a JSON object.</p>
+  <p>This API has some meaningful advantages over Parliament's API, including a more complete dataset with regards to MPs' websites and the articles therein (coming soon).</p>
+
+  <br>
+
+  <h2>Use</h2>
+  <p>The Tzetzes API can be accessed via:</p>
+  <div class="code-block">
+    <code>$ curl tzetzes.com/api/v1/mps/:id</code>
+  </div>
+  <p>:id should be replaced by the id of an MP. These run 0 - 649~, depending on ongoing by-elections.</p>
+  
+  <br>
+
+  <h2>Example</h2>
+  <p>Running:</p>
+  <div class="code-block">
+    <code>$ curl http://www.tzetzes.com/api/v1/mps/647</code>
+  </div>
+    <p>Returns:</p>
+  <div class="code-block">
+    <code>{"id":647,"name":"Daniel Zeichner","constituency":"Cambridge","majority":9639,"first_elected":2015,"elections_won":3,"mp_website_url":"http://www.danielzeichner.co.uk/"}</code>
+  </div>
+</div>

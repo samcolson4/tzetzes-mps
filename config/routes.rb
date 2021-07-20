@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/search", to: "articles#search"
   get "/articles", to: "articles#index"
   get "/about/privacy", to: "about#privacy"
+  get "/api", to: "application#api_index"
 
   mount API::Base, at: "/"
 
@@ -26,4 +27,9 @@ Rails.application.routes.draw do
   resources :mps do
     resources :articles
   end
+
+  if Rails.env.production?
+    get '404', :to => 'application#page_not_found'
+  end
+
 end
