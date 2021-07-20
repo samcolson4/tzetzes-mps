@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/search", to: "articles#search"
   get "/articles", to: "articles#index"
   get "/about/privacy", to: "about#privacy"
+  get "/api", to: "application#api_index"
 
   mount API::Base, at: "/"
 
