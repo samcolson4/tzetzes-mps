@@ -1,5 +1,9 @@
 <div class="content">
   <div class="width-set">
+    <%= link_to 'Statistics', '/articles/statistics' %>
+
+    <hr>
+
     <h1 class="section-header"> All articles </h1>
       <p><%= @articles_length %> articles.</p>
       <% @newest.each do |article| %>
