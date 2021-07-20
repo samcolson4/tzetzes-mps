@@ -45,6 +45,10 @@ class ArticlesController < ApplicationController
     @time_delta = t2 - t1
   end
 
+  def statistics
+    
+  end
+
 private
   def article_params
     params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id)
