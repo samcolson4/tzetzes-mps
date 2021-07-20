@@ -9,7 +9,7 @@
       <% @newest.each do |article| %>
         <% if @newest[0] != article %>
         <br>
-        <%end %>
+        <% end %>
         
         <% mp = find_mp(article.mp_id) %>
 
@@ -18,7 +18,7 @@
         
         <% if @newest[-1] != article %>
         <hr>
-        <%end %>
+        <% end %>
       <% end %>
   </div>
   <br>
