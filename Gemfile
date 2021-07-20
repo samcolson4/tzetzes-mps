@@ -86,3 +86,4 @@ gem 'premailer-rails'
 # API
 gem 'grape'
 gem 'rack-cors'
+gem 'grape-active_model_serializers'

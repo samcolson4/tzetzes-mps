@@ -2,7 +2,7 @@ module API
   module V1
     class Mps < Grape::API
       include API::V1::Defaults
-      resource :users do
+      resource :mps do
         desc "Return all MPs"
         get "" do
           Mp.all

@@ -18,7 +18,8 @@ module MpNewsSearch
         origins '*'
         resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
       end
-      
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
