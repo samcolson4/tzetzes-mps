@@ -47,9 +47,9 @@ class ArticlesController < ApplicationController
 
   def statistics
     @articles_length = Article.all.length
-    @dogs = Article.all.where("lower(article_text) LIKE :search", search: "dog").length
-    @cats = Article.all.where("lower(article_text) LIKE :search", search: "cats").length
-    @hedgehogs = Article.all.where("lower(article_text) LIKE :search", search: "hedgehogs").length
+    @dogs = Article.all.where("lower(article_text) LIKE :search", search: "%dog%").length
+    @cats = Article.all.where("lower(article_text) LIKE :search", search: "%cats%").length
+    @hedgehogs = Article.all.where("lower(article_text) LIKE :search", search: "%hedgehog%").length
 
     @most_articles = Article.group(:mp_id).order('mp_id DESC').limit(1000).count(:mp_id)
     
