@@ -8,7 +8,7 @@
   <h2>Summary</h2>
   <p>Total articles: <%= @articles_length %></p>
   <% if @seven_days > 0 %>
-    <p><%= @seven_days %> have been added in the last week.</p>
+    <p><%= @seven_days %> articles have been added in the past week.</p>
   <% end %>
   <p>The MP with the most articles is <%= find_mp(most_mp)[0].name %>, who has published <%= most_mp[1] %>.</p>
 
@@ -23,7 +23,7 @@
 
   <h2>Other</h2>
   <p>The most popular animals</p>
-  <%= column_chart({"Dogs" => @dogs, "Cats" => @cats, "Hedgehogs" => @hedgehogs}, max: 20) %>
+  <%= column_chart({"Dogs" => @dogs, "Cats" => @cats, "Hedgehogs" => @hedgehogs}) %>
 <br>
 <br>
 </div>
