@@ -51,7 +51,8 @@ class ArticlesController < ApplicationController
     @cats = Article.all.where("lower(article_text) LIKE :search", search: "cats").length
     @hedgehogs = Article.all.where("lower(article_text) LIKE :search", search: "hedgehogs").length
 
-    # @mp_most = Article.all.order('COUNT(mp_id) DESC').group('id')limit(1)
+    # @most_articles = Article.all.order(mp_id: :desc)
+    @most_articles = Article.group(:mp_id).order('mp_id DESC').limit(1000).count(:mp_id)
     
     # Mp with most articles
     # Tory w/most

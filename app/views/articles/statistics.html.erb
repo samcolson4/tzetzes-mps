@@ -1,8 +1,18 @@
-<h1>Stats!</h1>
-<p><%= @articles_length %></p>
-<p><%= @dogs %></p>
-<p><%= @cats %></p>
-<p><%= @hedgehogs %></p>
-<% @mp_most.each do |article|  %> 
-<%= article.mp_id %>
-<% end %>
+<% most_mp = @most_articles.max_by{|k,v| v} %>
+
+<div class="content width-set">
+  <h1>Stats!</h1>
+
+  <h2>Summary</h2>
+  <p>Total articles: <%= @articles_length %></p>
+  <p>The MP with the most articles is <%= find_mp(most_mp)[0].name %>, who has published <%= most_mp[1] %>.</p>
+
+  <br>
+  <hr>
+  <br>
+
+  <h2>MPs love animals</h2>
+  <p>Dog mentions: <%= @dogs %></p>
+  <p>Cat mentions: <%= @cats %></p>
+  <p>Hedgehog mentions: <%= @hedgehogs %></p>
+</div>
