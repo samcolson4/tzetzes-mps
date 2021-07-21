@@ -90,3 +90,4 @@ gem 'grape-active_model_serializers'
 
 # Charts
 gem 'chartkick'
+gem 'groupdate'
