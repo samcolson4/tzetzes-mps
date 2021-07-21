@@ -45,6 +45,22 @@ class ArticlesController < ApplicationController
     @time_delta = t2 - t1
   end
 
+  def statistics
+    @articles_length = Article.all.length
+    @dogs = Article.all.where("lower(article_text) LIKE :search", search: "dog").length
+    @cats = Article.all.where("lower(article_text) LIKE :search", search: "cats").length
+    @hedgehogs = Article.all.where("lower(article_text) LIKE :search", search: "hedgehogs").length
+
+    @most_articles = Article.group(:mp_id).order('mp_id DESC').limit(1000).count(:mp_id)
+    
+    @seven_days = Article.where('created_at >= ?', 1.week.ago).count
+
+    # Mp with most articles
+    # Tory w/most
+    # Labour w/most 
+    # etc
+  end
+
 private
   def article_params
     params.permit(:headline, :datetime, :url, :tag, :article_text, :mp_id)
