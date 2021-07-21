@@ -87,6 +87,7 @@ GEM
       xpath (~> 3.2)
     case_transform (0.2)
       activesupport
+    chartkick (4.0.5)
     childprocess (3.0.0)
     concurrent-ruby (1.1.9)
     connection_pool (2.2.5)
@@ -402,6 +403,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  chartkick
   database_cleaner-active_record
   devise
   friendly_id
