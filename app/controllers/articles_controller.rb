@@ -53,6 +53,8 @@ class ArticlesController < ApplicationController
 
     @most_articles = Article.group(:mp_id).order('mp_id DESC').limit(1000).count(:mp_id)
     
+    @seven_days = Article.where('created_at >= ?', 1.week.ago).count
+
     # Mp with most articles
     # Tory w/most
     # Labour w/most 
