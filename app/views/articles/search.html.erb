@@ -16,7 +16,7 @@
     <div class="width-set">
       <h1 class="section-header">MPs: </h1>
       <div class="mp-grid width-set">
-        <% @mp_results.each do |mp| %>
+        <% @mp_page.each do |mp| %>
           <%= link_to mp_path(mp.slug) do %>
             <img src=<%=mp.photo_url %> class="mp-photo">
             <p> <%= mp.name %> MP</p>
@@ -25,7 +25,12 @@
       </div>
       </div>
     <br>
+    <div>
+      <%= paginate @mp_page %>
+    </div>
+    <br>
   </div>
+  
 <% end %>
 
 <% if @constit_results.length > 0 %>
@@ -33,7 +38,7 @@
     <br>
       <div class="width-set">
       <h1 class="section-header"> Constituency results: </h1>
-      <% @constit_results.each do |mp| %>
+      <% @constit_page.each do |mp| %>
         <% if @constit_results[0] != mp %>
         <br>
         <% end %>
@@ -44,6 +49,10 @@
         <% end %>
       <% end %>
       </div>
+    <br>
+    <div id="constit-paginate">
+      <%= paginate @mp_page %>
+    </div>
     <br>
   </div>
 <% end %>

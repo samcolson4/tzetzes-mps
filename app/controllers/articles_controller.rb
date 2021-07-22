@@ -44,6 +44,8 @@ class ArticlesController < ApplicationController
 
       @headline_page = @headline_results.page(params[:page]).per(5)
       @article_page = @article_text_results.page(params[:page]).per(10)
+      @mp_page = @mp_results.page(params[:page]).per(6)
+      @constit_page = @constit_results.page(params[:page]).per(5)
     end
     t2 = Time.now
     @time_delta = t2 - t1
