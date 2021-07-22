@@ -2,6 +2,14 @@
   <p>Search completed in <%= @time_delta %> seconds.</p>
 </div>
 
+<% if @article_text_results.length > 1 %>
+  <div class="graph content width-set">
+    <h2>Mentions of '<%= @search_param %>' over time:</h2>
+    <%= line_chart Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%").where('datetime > ?', "2020-01-01").group_by_quarter(:datetime).count %>
+  </div>
+  <br>
+<% end %>
+
 <% if @mp_results.length > 0 %>
   <div class="mp-results results">
     <br>

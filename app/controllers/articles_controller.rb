@@ -35,6 +35,7 @@ class ArticlesController < ApplicationController
     if params[:search].blank?
       redirect_to "/about" and return
     else
+      @search_param = params[:search]
       @parameter = params[:search].downcase
       @headline_results = Article.all.where("lower(headline) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc).limit(1000)
       @article_text_results = Article.all.where("lower(article_text) LIKE :search", search: "%#{@parameter}%").order(datetime: :desc).limit(1000)
