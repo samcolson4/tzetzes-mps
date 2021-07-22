@@ -59,8 +59,8 @@
         <p> <%= @headline_results.length %> result found.</p>
       <% end %>
       <br>
-      <% @headline_results.each do |article| %>
-        <% if @headline_results[0] != article %>
+      <% @headline_page.each do |article| %>
+        <% if @headline_page[0] != article %>
         <br>
         <%end %>
         <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
@@ -71,10 +71,15 @@
         <% article_preview = get_preview_text(params[:search], article.article_text) %>
 
         <p> <%= article_preview[0] %> <span class="search-highlight"><%= article_preview[1] %></span> <%= article_preview[2] %> </p>
-        <% if @headline_results[-1] != article %>
+        <% if @headline_page[-1] != article %>
         <hr>
         <%end %>
       <% end %>
+      
+      <div>
+      <%= paginate @headline_page %>
+      </div>
+
       </div>
     <br>
   </div>
@@ -91,8 +96,8 @@
         <p> <%= @article_text_results.length %> result found.</p>
       <% end %>
       <br>
-      <% @article_text_results.each do |article| %>
-        <% if @article_text_results[0] != article %>
+      <% @article_page.each do |article| %>
+        <% if @article_page[0] != article %>
         <br>
         <%end %>
       <h2><%= link_to article.headline, article.url, :target => "_blank" %></h2>
@@ -103,10 +108,15 @@
       <% in_article_preview = get_preview_text(params[:search], article.article_text) %>
       <p> <%= in_article_preview[0] %> <span class="search-highlight"><%= in_article_preview[1] %></span> <%= in_article_preview[2] %> </p>
 
-        <% if @article_text_results[-1] != article %>
+        <% if @article_page[-1] != article %>
         <hr>
         <%end %>
       <% end %>
+
+      <div>
+        <br>
+        <%= paginate @article_page %>
+      </div>
       </div>
     <br>
   </div>
