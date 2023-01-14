@@ -51,6 +51,7 @@ group :development do
   gem 'spring'
   gem 'mailcatcher'
   gem 'sqlite3'
+  gem 'rake', '13.0.6'
 end
 
 group :test do
