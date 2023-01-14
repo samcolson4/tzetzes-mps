@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '3.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
@@ -28,12 +28,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootsnap', '>= 1.15.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  
+
   # Testing
   gem 'rspec-rails'
   gem 'simplecov'
@@ -76,8 +76,11 @@ gem 'friendly_id'
 
 # Email testing
 gem 'actionview-encoded_mail_to'
-gem 'sidekiq'
+gem 'sidekiq', '>= 7.0.3'
 gem 'redis-rails'
+gem 'net-smtp', require: false
+gem 'net-pop', require: false
+gem 'net-imap', require: false
 
 # Email styling
 gem 'nokogiri'
@@ -91,3 +94,6 @@ gem 'grape-active_model_serializers'
 # Charts
 gem 'chartkick'
 gem 'groupdate'
+
+# Other
+gem 'globalid', '~> 1.0'
